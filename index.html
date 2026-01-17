@@ -55,9 +55,9 @@
          p-4 ">
 
   <div class="flex flex-col md:flex-row gap-8 md:gap-[4vw] text-center">
-    <a href="" class="text-gray-900 dark:text-gray-200 hover:text-blue-700">Achievement</a>
-    <a href="#" class="text-gray-900 dark:text-gray-200 hover:text-blue-700">Certificate</a>
-    <a href="#" class="text-gray-900 dark:text-gray-200 hover:text-blue-700">Contact</a>
+    <a href="" class="text-gray-900 dark:text-gray-200 hover:text-blue-700 font-medium dark:hover:text-blue-400">Achievement</a>
+    <a href="#" class="text-gray-900 dark:text-gray-200 hover:text-blue-700 font-medium dark:hover:text-blue-400">Certificate</a>
+    <a href="#" class="text-gray-900 dark:text-gray-200 hover:text-blue-700 font-medium dark:hover:text-blue-400">Contact</a>
   </div>
 </div>
 
@@ -68,7 +68,8 @@
 </div>
  <button id="themeToggle"
         class="ml-4 px-3 py-1 rounded-md text-sm font-medium
-               bg-gray-900 text-white dark:bg-white dark:text-black">
+               bg-gray-900 text-white dark:bg-white dark:text-black hover:bg-blue-400 dark:hover:bg-blue-400
+               transition-colors duration-300">
         Dark
       </button>
   </nav>
@@ -184,50 +185,47 @@
             </div>
         </div>
 
-    <div class="reveal grid grid-cols-2 md:grid-cols-4 gap-6 pb-10 dark:text-gray-200">
-    <div class="relative aspect-[16/9] md:aspect-auto md:h-48 overflow-hidden bg-rose-300/60 rounded-2xl flex items-center justify-center border-2 border-white shadow-sm hover:scale-[1.02] transition-all cursor-pointer group">
-        <img src="photo/sap.png" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Certificate 1">
+   <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pb-10 dark:text-gray-200">
+    <div onclick="showModal('photo/sap.png')" class="relative aspect-[16/9] md:aspect-auto md:h-48 overflow-hidden bg-rose-300/60 rounded-2xl flex items-center justify-center border-2 border-white shadow-sm hover:scale-[1.02] transition-all cursor-pointer group">
+        <img src="photo/sap.png" class="blur-sm absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Certificate 1">
         <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-        <p class="relative font-bold text-white group-hover:scale-110 transition-transform drop-shadow-md dark:text-gray-200">Certificate Complation</p>
+        <p class="relative font-bold text-blue-600 group-hover:scale-110 transition-transform drop-shadow-md">SAP</p>
     </div>
 
-    <div class="reveal relative aspect-[16/9] md:aspect-auto md:h-48 overflow-hidden bg-rose-300/60 rounded-2xl flex items-center justify-center border-2 border-white shadow-sm hover:scale-[1.02] transition-all cursor-pointer group">
-        <img src="photo/sti.png" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Certificate 2">
+    <div onclick="showModal('photo/sti.png')" class="relative aspect-[16/9] md:aspect-auto md:h-48 overflow-hidden bg-rose-300/60 rounded-2xl flex items-center justify-center border-2 border-white shadow-sm hover:scale-[1.02] transition-all cursor-pointer group">
+        <img src="photo/sti.png" class="blur-sm absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Certificate 2">
         <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-        <p class="relative font-bold text-white group-hover:scale-110 transition-transform drop-shadow-md">Certificate 2</p>
+        <p class="relative font-bold text-blue-600 group-hover:scale-110 transition-transform drop-shadow-md">STI COMPLETION</p>
     </div>
 
-    <div class="reveal relative aspect-[16/9] md:aspect-auto md:h-48 overflow-hidden bg-rose-300/60 rounded-2xl flex items-center justify-center border-2 border-white shadow-sm hover:scale-[1.02] transition-all cursor-pointer group">
-        <img src="photo/java.png" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Certificate 3">
+    <div onclick="showModal('photo/java.png')" class="relative aspect-[16/9] md:aspect-auto md:h-48 overflow-hidden bg-rose-300/60 rounded-2xl flex items-center justify-center border-2 border-white shadow-sm hover:scale-[1.02] transition-all cursor-pointer group">
+        <img src="photo/java.png" class="blur-sm absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Certificate 3">
         <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-        <p class="relative font-bold text-white group-hover:scale-110 transition-transform drop-shadow-md">Certificate 3</p>
+        <p class="relative font-bold text-blue-600 group-hover:scale-110 transition-transform drop-shadow-md">JAVA FOUNDATION</p>
     </div>
 
-    <div class="reveal relative aspect-[16/9] md:aspect-auto md:h-48 overflow-hidden bg-rose-300/60 rounded-2xl flex items-center justify-center border-2 border-white shadow-sm hover:scale-[1.02] transition-all cursor-pointer group">
-        <img src="photo/mitsi.png" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Certificate 4">
+    <div onclick="showModal('photo/mitsi.png')" class="relative aspect-[16/9] md:aspect-auto md:h-48 overflow-hidden bg-rose-300/60 rounded-2xl flex items-center justify-center border-2 border-white shadow-sm hover:scale-[1.02] transition-all cursor-pointer group">
+        <img src="photo/mitsi.png" class="blur-sm absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Certificate 4">
         <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-        <p class="relative font-bold text-white group-hover:scale-110 transition-transform drop-shadow-md">Certificate 4</p>
+        <p class="relative font-bold text-blue-600 group-hover:scale-110 transition-transform drop-shadow-md">MITSI</p>
     </div>
 </div>
 
-    </div>
+  </div>
 </div>
-
-
-
-
-
-
- 
-
-
-
+<div id="modal" class="fixed inset-0 hidden items-center justify-center bg-black/80 z-50">
+  <div class="flex flex-col items-center gap-4">
+    <img id="modal-img" class="max-w-[95%] max-h-[80vh] rounded-xl shadow-lg object-contain">
+    <button onclick="closeModal()" class="px-6 py-2 rounded-full bg-white text-black-600 hover:bg-blue-400 dark:hover:bg-blue-300 dark:text-white-500 dark:bg-gray-500 font-medium">Close</button>
+  </div>
+</div>
 
 
                                             <!-- FOOOTER -->
  
 
 <div id="footer-placeholder"></div>
+<script src="javascript/script3.js"></script>
 <script src="javascript/script2.js"></script>
 <script src="javascript/script.js"></script>
   </body>
