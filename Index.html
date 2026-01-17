@@ -1,0 +1,234 @@
+<HTML>
+    <head>
+
+        <title>        
+             Portfolio 2026     
+        </title>
+        <script src="https://cdn.tailwindcss.com"></script>
+         <link rel="stylesheet" href="css">
+        <!-- <script src="javascript/script.js"></script> -->
+         <link rel="icon" type="image/png" href="photo/logo22.png"/>
+         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+     <script>
+        
+        
+     tailwind.config = {
+      darkMode: 'class'
+    }
+
+   function onToggleMenu(e) {
+    e.name = e.name === 'menu' ? 'close' : 'menu';
+
+    const navLinks = document.querySelector('.nav-links');
+
+    navLinks.classList.toggle('top-[9%]');
+    navLinks.classList.toggle('opacity-100');
+}
+     </script>
+    </head>
+
+        <body>
+        
+          <body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+
+  <!-- NAVBAR -->
+  <nav class="flex justify-between items-center p-4 mx-4 mt-4 rounded-md
+               dark:bg-gray-800
+              border-2 border-blue-200 dark:border-gray-700 border-r-4 border-l-4 ">
+
+    <a href="#" class="">
+        <img src="photo/logo22.png" alt="YourLogo" class="w-12 h-auto mx-auto md:mx-0">
+    </a>
+<div
+  class="nav-links
+         md:absolute md:left-1/2 md:-translate-x-1/2
+         md:top-auto
+         absolute left-0 top-[-100%]
+         w-full md:w-auto
+         min-h-[25vh] md:min-h-fit
+         flex items-center justify-center
+         md:bg-transparent dark:md:bg-transparent
+         transition-all duration-300 ease-in-out
+         opacity-0 md:opacity-100
+         p-4 ">
+
+  <div class="flex flex-col md:flex-row gap-8 md:gap-[4vw] text-center">
+    <a href="" class="text-gray-900 dark:text-gray-200 hover:text-blue-700">Achievement</a>
+    <a href="#" class="text-gray-900 dark:text-gray-200 hover:text-blue-700">Certificate</a>
+    <a href="#" class="text-gray-900 dark:text-gray-200 hover:text-blue-700">Contact</a>
+  </div>
+</div>
+
+
+
+<div class="flex items-center gap-6">
+ <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3x1 cursor-pointer md:hidden dark:text-white-500 text-blue-600"></ion-icon>
+</div>
+ <button id="themeToggle"
+        class="ml-4 px-3 py-1 rounded-md text-sm font-medium
+               bg-gray-900 text-white dark:bg-white dark:text-black">
+        Dark
+      </button>
+  </nav>
+             <!-- MENU -->
+              <div class="flex justify-center items-center h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-00">
+               <h1 class="font-bold text-center mt-10 
+             text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
+             text-gray-900 dark:text-blue-600">
+                 A <span id="typingText" class="text-blue-600 font-roboto dark:text-white"></span></h1>
+          </div>
+
+               <div class=" justify-center items-center mt-10">
+                <p class="flex justify-center items-center text-blue-600 dark:text-white font-medium">scroll for more details</p>
+                <img src="https://media.invisioncic.com/p289038/monthly_2020_05/arrow-down.gif.8d9aec7b8f92f2a50a1a64fce1733f3a.gif" alt="Scroll Down" class="mx-auto w-10 h-10">
+          </div>
+
+  <!-- PORTFOLIO GRID -->
+
+<div class="grid grid-cols-1 md:grid-cols-6 gap-4 p-6 min-h-fit md:min-h-[600px]">
+  <a href="/graphic-design" class="reveal group relative md:col-span-3 md:row-span-2 overflow-hidden rounded-lg shadow-lg min-h-[200px]">
+    <img src="photo/ehe.png" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Graphic Design">
+    <div class="absolute inset-0 bg-black/40 flex items-end p-8">
+      <h2 class="text-3xl font-extrabold text-white tracking-tight">Graphic Design</h2>
+    </div>
+  </a>
+
+  <a href="/ui-ux" class="reveal group relative md:col-span-3 overflow-hidden rounded-lg shadow-lg min-h-[200px]">
+    <img src="photo/haluh.png" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="UI/UX">
+    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+      <h2 class="text-2xl font-bold text-white">UI/UX Design</h2>
+    </div>
+  </a>
+
+  <a href="Aboutme.html" class="reveal group relative md:col-span-1 md:col-start-4 overflow-hidden rounded-lg shadow-lg min-h-[200px]">
+    <img src="photo/aaaaaaa.jpg" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Programming">
+    <div class="absolute inset-0 bg-slate-900/60 flex items-center justify-center p-4 text-center">
+      <h2 class="text-lg font-bold text-white leading-tight">About me?</h2>
+    </div>
+  </a>
+
+  <a href="/web-programming" class="reveal group relative md:col-span-2 overflow-hidden rounded-lg shadow-lg min-h-[200px]">
+    <img src="photo/coders.png" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="About Me">
+    <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+      <h2 class="text-xl font-bold text-white px-4 py-2">Web Programming</h2>
+    </div>
+  </a>
+</div>
+                                          <!-- About ME -->
+<div class="w-full min-h-screen p-4 md:p-8 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    
+    <div class="max-w-full mx-auto flex flex-col gap-6">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            <div class="lg:col-span-2 flex flex-col gap-6">
+                
+                <div class="reveal bg-white/50 rounded-3xl p-8 flex flex-col md:flex-row items-center gap-8 shadow-sm border border-white/40 backdrop-blur-sm dark:bg-gray-800/50 dark:border-gray-700">
+                    <img src="photo/aaaaaaa.jpg" alt="Profile" class="w-40 h-40 rounded-full object-cover border-4 border-white shadow-md">
+                    <div>
+                        <h1 class="text-3xl text-gray-800 dark:text-white">About me</h1>
+                        <p class="text-lg font-medium text-gray-800 dark:text-white mt-4">
+                            Hi! my name <span class="text-blue-600 dark:text-blue-400">Hernan Castaneda</span> and I'm a fresh graduate and creative designer with a passion for Graphic Design, UI/UX Design, and Web Development.
+                        </p>
+                    </div>
+                </div>
+              <div class="reveal rounded-3xl p-8 grid grid-cols-1 md:grid-cols-2 gap-6 shadow-sm min-h-fit dark:bg-gray-800/50 dark:border-gray-700">
+    <div class="flex items-center">
+        <p class="text-xl font-medium text-gray-800 dark:text-white">
+            I'm from Philippines and currently I'm here at 
+            <span class="text-blue-600 dark:text-blue-400">Quezon City</span>.
+        </p>
+    </div>
+    
+    <div class="bg-white/50 rounded-2xl overflow-hidden h-64 md:h-full min-h-[200px] border-4 border-white dark:border-gray-700 shadow-inner border border-white/40 backdrop-blur-sm ">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123547.28385805561!2d120.992149!3d14.650453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b10076046719%3A0x67341e9d1a38f32!2sQuezon%20City%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1700000000000" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
+</div>
+
+            <div class="reveal bg-white/50 rounded-3xl p-8 shadow-sm border border-white/40 backdrop-blur-sm flex flex-col justify-between space-y-8 dark:bg-gray-800/50 dark:border-gray-700">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">Programming Skills</h3>
+                    <div class="flex flex-wrap gap-3 dark:text-gray-200">
+                        <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium dark:text-white">Java</span>
+                         <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium dark:text-white">Tailwind</span>
+                        <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium dark:text-white">C#</span>
+                        <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium dark:text-white">HTML</span>
+                        <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium dark:text-white">CSS</span>
+                        <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium dark:text-white">JavaScript</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">Resources & Platforms</h3>
+                    <div class="flex flex-wrap gap-3 dark:text-gray-200">
+                        <span class="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium">Visual Studio Code</span>
+                        <span class="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium">Figma</span>
+                        <span class="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium">Adobe Photoshop</span>
+                        <span class="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium">Affinity</span>
+                    </div>
+                </div>
+
+                <div class="pt-6 border-t border-blue-500 dark:text-gray-200">
+                    <h3 class="text-xl font-bold mb-4 italic text-gray-800 dark:text-white">Services</h3>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-300">
+                        <li class="flex items-center text-lg"><span class="w-8 text-blue-400 ">⚡</span> Web Development</li>
+                        <li class="flex items-center text-lg"><span class="w-8 text-pink-400">🎨</span> Graphics Design</li>
+                        <li class="flex items-center text-lg"><span class="w-8 text-purple-400">🎬</span> UI/UX Designer</li>
+                        <li class="flex items-center text-lg"><span class="w-8 text-indigo-400">🛠️</span> Tech-Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <div class="reveal grid grid-cols-2 md:grid-cols-4 gap-6 pb-10 dark:text-gray-200">
+    <div class="relative aspect-[16/9] md:aspect-auto md:h-48 overflow-hidden bg-rose-300/60 rounded-2xl flex items-center justify-center border-2 border-white shadow-sm hover:scale-[1.02] transition-all cursor-pointer group">
+        <img src="photo/sap.png" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Certificate 1">
+        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+        <p class="relative font-bold text-white group-hover:scale-110 transition-transform drop-shadow-md dark:text-gray-200">Certificate Complation</p>
+    </div>
+
+    <div class="reveal relative aspect-[16/9] md:aspect-auto md:h-48 overflow-hidden bg-rose-300/60 rounded-2xl flex items-center justify-center border-2 border-white shadow-sm hover:scale-[1.02] transition-all cursor-pointer group">
+        <img src="photo/sti.png" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Certificate 2">
+        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+        <p class="relative font-bold text-white group-hover:scale-110 transition-transform drop-shadow-md">Certificate 2</p>
+    </div>
+
+    <div class="reveal relative aspect-[16/9] md:aspect-auto md:h-48 overflow-hidden bg-rose-300/60 rounded-2xl flex items-center justify-center border-2 border-white shadow-sm hover:scale-[1.02] transition-all cursor-pointer group">
+        <img src="photo/java.png" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Certificate 3">
+        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+        <p class="relative font-bold text-white group-hover:scale-110 transition-transform drop-shadow-md">Certificate 3</p>
+    </div>
+
+    <div class="reveal relative aspect-[16/9] md:aspect-auto md:h-48 overflow-hidden bg-rose-300/60 rounded-2xl flex items-center justify-center border-2 border-white shadow-sm hover:scale-[1.02] transition-all cursor-pointer group">
+        <img src="photo/mitsi.png" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Certificate 4">
+        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+        <p class="relative font-bold text-white group-hover:scale-110 transition-transform drop-shadow-md">Certificate 4</p>
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+
+
+
+
+ 
+
+
+
+
+
+                                            <!-- FOOOTER -->
+ 
+
+<div id="footer-placeholder"></div>
+<script src="javascript/script2.js"></script>
+<script src="javascript/script.js"></script>
+  </body>
+        </html>
