@@ -86,7 +86,7 @@
   </nav>
              <!-- MENU -->
             <canvas id="constellationCanvas" class="fixed top-0 left-0 w-full h-full -z-10 bg-gray-100 dark:bg-gray-900"></canvas>
-              <div class="flex justify-center items-center h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-00">
+              <div class="flex justify-center items-center h-screen transition-colors duration-00">
                <h1 class="font-bold text-center mt-10 
              text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
              text-gray-900 dark:text-blue-600">
@@ -329,16 +329,28 @@
 const canvas = document.getElementById('constellationCanvas');
 const ctx = canvas.getContext('2d');
 let particles = [];
-const particleCount = 120; // Slightly more stars for better effect
-let mouse = { x: null, y: null, radius: 150 }; // Radius is how far stars "reach" for the mouse
+let particleCount = 120; 
+let connectionDistance = 100;
+let mouseRadius = 150;
+let mouse = { x: null, y: null };
 
 window.addEventListener('mousemove', (e) => {
     mouse.x = e.x;
     mouse.y = e.y;
 });
 
-// Reset mouse position when it leaves the window
 window.addEventListener('mouseout', () => {
+    mouse.x = null;
+    mouse.y = null;
+});
+
+// Added touch support so mobile users can "tap" to connect stars
+window.addEventListener('touchstart', (e) => {
+    mouse.x = e.touches[0].clientX;
+    mouse.y = e.touches[0].clientY;
+});
+
+window.addEventListener('touchend', () => {
     mouse.x = null;
     mouse.y = null;
 });
@@ -346,6 +358,18 @@ window.addEventListener('mouseout', () => {
 function init() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    
+    // --- Responsive Adjustments ---
+    if (window.innerWidth < 768) {
+        particleCount = 40;        // Fewer stars on mobile
+        connectionDistance = 70;   // Shorter lines between stars
+        mouseRadius = 100;         // Smaller interaction area
+    } else {
+        particleCount = 120;       // Full stars on desktop
+        connectionDistance = 100;
+        mouseRadius = 150;
+    }
+
     particles = [];
     for (let i = 0; i < particleCount; i++) {
         particles.push({
@@ -362,7 +386,6 @@ function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     const isDark = document.documentElement.classList.contains('dark');
     
-    // Line colors
     const lineColor = isDark ? 'rgba(59, 130, 246,' : 'rgba(31, 41, 55,';
     ctx.fillStyle = isDark ? '#3b82f6' : '#1f2937';
 
@@ -377,12 +400,11 @@ function animate() {
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fill();
 
-        // Connect stars to each other
         for (let j = i + 1; j < particles.length; j++) {
             const p2 = particles[j];
             const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-            if (dist < 100) {
-                ctx.strokeStyle = `${lineColor} ${1 - dist / 100})`;
+            if (dist < connectionDistance) {
+                ctx.strokeStyle = `${lineColor} ${1 - dist / connectionDistance})`;
                 ctx.lineWidth = 0.5;
                 ctx.beginPath();
                 ctx.moveTo(p.x, p.y);
@@ -391,12 +413,11 @@ function animate() {
             }
         }
 
-        // NEW: Connect stars to Mouse
         if (mouse.x !== null) {
             const mouseDist = Math.hypot(p.x - mouse.x, p.y - mouse.y);
-            if (mouseDist < mouse.radius) {
-                ctx.strokeStyle = isDark ? `rgba(255, 255, 255, ${1 - mouseDist / mouse.radius})` : `rgba(59, 130, 246, ${1 - mouseDist / mouse.radius})`;
-                ctx.lineWidth = 1.5; // Thicker lines for the mouse interaction
+            if (mouseDist < mouseRadius) {
+                ctx.strokeStyle = isDark ? `rgba(255, 255, 255, ${1 - mouseDist / mouseRadius})` : `rgba(59, 130, 246, ${1 - mouseDist / mouseRadius})`;
+                ctx.lineWidth = 1; 
                 ctx.beginPath();
                 ctx.moveTo(p.x, p.y);
                 ctx.lineTo(mouse.x, mouse.y);
@@ -419,6 +440,7 @@ animate();
 <script src="javascript/script.js"></script>
   </body>
         </html>
+
 
 
 
