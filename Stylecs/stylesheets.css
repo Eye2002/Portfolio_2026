@@ -1,0 +1,121 @@
+/* LIGHT MODE (Default) */
+.glass-sphere {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 4px 15px rgba(255, 255, 255, 0.3), 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.water-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(180deg, #22d3ee 0%, #1862b6 100%); /* Cyan */
+    transition: height 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* DARK MODE OVERRIDES */
+/* This triggers if your <html> or <body> has class="dark" */
+.dark .glass-sphere {
+    background: rgba(15, 23, 42, 0.6); /* Darker Slate */
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 4px 15px rgba(255, 255, 255, 0.1), 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.dark .water-wrapper {
+    background: linear-gradient(180deg, #818cf8 0%, #2d2c81 100%); /* Indigo */
+}
+
+.dark .water-wrapper::before {
+    background: #383d6b;
+}
+
+/* Hover Effects */
+.glass-sphere:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+}
+.dark .glass-sphere:hover {
+    box-shadow: 0 0 20px rgba(48, 83, 124, 0.808);
+}
+
+.glass-sphere:hover .water-wrapper {
+    height: 100% !important;
+}
+
+/* Wave Animations */
+.water-wrapper::before, .water-wrapper::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: -165px;
+    left: 50%;
+    background: rgb(3, 90, 221);
+    border-radius: 40%;
+    transform: translateX(-50%);
+    animation: fill-wave 7s infinite linear;
+}
+.water-wrapper::after {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 35%;
+    animation: fill-wave 10s infinite linear;
+    top: -10px;
+}
+
+@keyframes fill-wave {
+    0% { transform: translate(-50%, 0) rotate(0deg); }
+    100% { transform: translate(-50%, 0) rotate(360deg); }
+}
+
+.reflection {
+    position: absolute;
+    top: 10%; left: 15%; width: 30%; height: 20%;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%; filter: blur(4px);
+    transform: rotate(-35deg); z-index: 10;
+}
+
+.scroll-icon {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; z-index: 20;
+}
+
+.dark.scroll-icon {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(240, 200, 241); z-index: 20;
+}
+
+
+@media (max-width: 768px) {
+    .glass-sphere {
+        bottom: 20px; /* Moves closer to edge */
+        right: 20px;
+        width: 55px;  /* Slightly smaller for mobile */
+        height: 55px;
+    }
+    
+    /* Disables hover scaling on touch devices to prevent "sticky" hover states */
+    .glass-sphere:hover {
+        transform: scale(1);
+    }
+}
+    .dark .glass-sphere:hover {
+    transform: scale(1);
+}
