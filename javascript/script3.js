@@ -76,7 +76,7 @@ document.getElementById('scroll-link1').addEventListener('click', function(e) {
   e.preventDefault(); // Stop the instant jump
   
 
-  const target = document.getElementById('aboutme');
+  const target = document.getElementById('Experiences');
   
   target.scrollIntoView({
     behavior: 'smooth',
@@ -88,7 +88,7 @@ document.getElementById('scroll-link1').addEventListener('click', function(e) {
   e.preventDefault(); // Stop the instant jump
   
   
-  const target = document.getElementById('certificates-section');
+  const target = document.getElementById('aboutme');
   
   target.scrollIntoView({
     behavior: 'smooth',
@@ -119,3 +119,4 @@ window.addEventListener('scroll', () => {
 scrollBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
