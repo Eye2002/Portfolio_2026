@@ -1,51 +1,58 @@
- 
-        document.addEventListener("DOMContentLoaded", function() {
-            let currentSlide = 0;
-            const slider = document.getElementById('slider');
-            const dots = document.querySelectorAll('.dot');
-            const totalSlides = dots.length; // Use dots length as a reliable count
-            let slideInterval;
+document.addEventListener("DOMContentLoaded", function() {
+    // Select all containers that hold a slider
+    const containers = document.querySelectorAll('.flex.flex-col.lg\\:flex-row-reverse, .flex.flex-col.lg\\:flex-row');
 
-            function updateSlider() {
-                // Apply the transform
-                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-                
-                // Update dots
-                dots.forEach((dot, index) => {
-                    if (index === currentSlide) {
-                        dot.style.opacity = "1";
-                        dot.style.transform = "scale(1.2)";
-                    } else {
-                        dot.style.opacity = "0.4";
-                        dot.style.transform = "scale(1)";
-                    }
-                });
-            }
+    containers.forEach((container) => {
+        const slider = container.querySelector('[id^="slider"]');
+        const dots = container.querySelectorAll('.dot');
+        
+        // If this specific section doesn't have a slider, skip it
+        if (!slider || dots.length === 0) return;
 
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % totalSlides;
-                updateSlider();
-            }
+        let currentSlide = 0;
+        const totalSlides = dots.length;
+        let slideInterval;
 
-            function startTimer() {
-                clearInterval(slideInterval);
-                slideInterval = setInterval(nextSlide, 3000);
-            }
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.style.opacity = "1";
+                    dot.style.transform = "scale(1.2)";
+                } else {
+                    dot.style.opacity = "0.4";
+                    dot.style.transform = "scale(1)";
+                }
+            });
+        }
 
-            // Expose functions to the window so HTML 'onclick' can see them
-            window.manualNext = function() {
-                nextSlide();
-                startTimer();
-            }
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
 
-            window.manualGoTo = function(index, event) {
-                if (event) event.stopPropagation();
-                currentSlide = index;
-                updateSlider();
-                startTimer();
-            }
+        function startTimer() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 3000);
+        }
 
-            // Start everything
+        // Attach local functions to the images/container
+        // We use click listeners instead of inline onclick to keep sections separate
+        container.querySelector('.relative.overflow-hidden').addEventListener('click', () => {
+            nextSlide();
             startTimer();
         });
-        
+
+        const thumbnails = container.querySelectorAll('.sm\\:grid img');
+        thumbnails.forEach((thumb, idx) => {
+            thumb.addEventListener('click', (e) => {
+                e.stopPropagation();
+                currentSlide = idx;
+                updateSlider();
+                startTimer();
+            });
+        });
+
+        startTimer();
+    });
+});
