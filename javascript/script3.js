@@ -96,6 +96,19 @@ document.getElementById('scroll-link1').addEventListener('click', function(e) {
   });
 });
 
+  document.getElementById('scroll-link3').addEventListener('click', function(e) {
+  e.preventDefault(); // Stop the instant jump
+  
+  
+  const target = document.getElementById('apoint');
+  
+  target.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start' // Aligns the section to the top of the screen
+  });
+});
+
+
 // scroll to top button with water fill animation
 const scrollBtn = document.getElementById('scrollBtn');
 const waterLevel = document.getElementById('waterLevel');
@@ -119,4 +132,5 @@ window.addEventListener('scroll', () => {
 scrollBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
 
