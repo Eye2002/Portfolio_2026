@@ -66,7 +66,7 @@
          p-4 ">
 
   <div class="flex flex-col md:flex-row gap-8 md:gap-[4vw] text-center">
-    <a href="#"  class="text-gray-900 dark:text-gray-200 hover:text-blue-700 font-medium dark:hover:text-blue-400">Appointment</a>
+    <a href="#apoint" id="scroll-link3" class="text-gray-900 dark:text-gray-200 hover:text-blue-700 font-medium dark:hover:text-blue-400">Appointment</a>
     <a href="#aboutme" id="scroll-link" class="text-gray-900 dark:text-gray-200 hover:text-blue-700 font-medium dark:hover:text-blue-400">About me</a>
     <a href="#" class="text-gray-900 dark:text-gray-200 hover:text-blue-700 font-medium dark:hover:text-blue-400">Contact</a>
   </div>
@@ -101,14 +101,14 @@
   <!-- PORTFOLIO GRID -->
 
 <div class="grid grid-cols-1 md:grid-cols-6 gap-4 p-6 min-h-fit md:min-h-[600px]">
-  <a href="https://www.behance.net/hernancastaneda29" class="reveal group relative md:col-span-3 md:row-span-2 overflow-hidden rounded-lg shadow-lg min-h-[200px]">
+  <a href="/graphic-design" class="reveal group relative md:col-span-3 md:row-span-2 overflow-hidden rounded-lg shadow-lg min-h-[200px]">
     <img src="photo/ehe.png" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Graphic Design">
     <div class="absolute inset-0 bg-black/40 flex items-end p-8">
       <h2 class="text-3xl font-extrabold text-white tracking-tight">Graphic Design</h2>
     </div>
   </a>
 
-  <a href="https://www.behance.net/hernancastaneda29" class="reveal group relative md:col-span-3 overflow-hidden rounded-lg shadow-lg min-h-[200px]">
+  <a href="/ui-ux" class="reveal group relative md:col-span-3 overflow-hidden rounded-lg shadow-lg min-h-[200px]">
     <img src="photo/haluh.png" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="UI/UX">
     <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
       <h2 class="text-2xl font-bold text-white">UI/UX Design</h2>
@@ -122,7 +122,7 @@
     </div>
   </a>
 
-  <a href="#" class="reveal group relative md:col-span-2 overflow-hidden rounded-lg shadow-lg min-h-[200px]">
+  <a href="/web-programming" class="reveal group relative md:col-span-2 overflow-hidden rounded-lg shadow-lg min-h-[200px]">
     <img src="photo/coders.png" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="About Me">
     <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
       <h2 class="text-xl font-bold text-white px-4 py-2">Web Programming</h2>
@@ -386,15 +386,79 @@
       
       <div class="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
         <p class="mt-4">
-       Vierz Streetwear & Life is a web-based inventory and sales management system developed to help manage products, orders,
-        and sales efficiently. The system features an admin dashboard with sales reports and product tracking, built using HTML, CSS,
-        JavaScript, and PHP. This project allowed me to apply my web development skills and gain hands-on experience in creating a functional system for real-world business use.
+          During my internship at Mitsi, I had the opportunity to work as an IT Staff Intern where I was able to apply my programming skills 
+          and gain hands-on experience in various IT tasks. My responsibilities coding simple code, working with SAP systems, and fixing hardware 
+          issues. This experience allowed me to develop my technical skills and understand the practical applications of programming in a professional setting.
         </p>
       </div>
     </div>
   </div>
 </div>
-                                            <!-- FOOOTER -->
+
+
+<!-- appointment -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<div id="apoint" class="min-h-screen p-6 flex items-center justify-center bg-gray-100/30 dark:bg-gray-950/60">
+  <div class="w-full max-w-4xl p-8 rounded-2xl border border-gray-200 dark:border-gray-800 bg-gray-50/20 dark:bg-gray-900/50 backdrop-blur-sm shadow-xl">
+    
+    <h2 class="text-2xl font-bold mb-6 text-gray-800 dark:text-blue-600">Appointment</h2>
+    
+    <form class="space-y-6" name="google-sheet">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Full Name</label>
+          <input name="Full Name" type="text" required placeholder="Hernan Castaneda" class="w-full px-4 py-3 rounded-lg bg-white/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Email Address</label>
+          <input name="Email" type="email" required placeholder="example@gmail.com" class="w-full px-4 py-3 rounded-lg bg-white/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Phone Number</label>
+          <input 
+            name="Phone"
+            type="tel" 
+            placeholder="09123456789" 
+            maxlength="11"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+            pattern="[0-9]{11}"
+            required
+            class="w-full px-4 py-3 rounded-lg bg-white/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+          >
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Service Selection</label>
+          <select name="Service" class="w-full px-4 py-3 text-gray-600 dark:text-white rounded-lg bg-white/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+            <option>Web Developement</option>
+            <option>UI / UX Design</option>
+            <option>Graphic Design</option>
+            <option>Others</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Message / Suggestion</label>
+        <textarea name="Message" rows="4" placeholder="How can we help you?" class="w-full px-4 py-3 rounded-lg bg-white/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 outline-none transition-all"></textarea>
+      </div>
+
+      <div class="flex justify-center pt-4">
+        <button type="submit" id="submitBtn" class="px-12 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-0.5 transition-all">
+          Appoint
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+<!-- FOOOTER -->
 <div id="scrollBtn" class="glass-sphere opacity-0 pointer-events-none">
     <div class="reflection"></div>
     <div id="waterLevel" class="water-wrapper"></div>
@@ -405,6 +469,10 @@
     </div>
 </div>
 </div>
+
+
+
+
 <script>
 const canvas = document.getElementById('constellationCanvas');
 const ctx = canvas.getContext('2d');
@@ -511,8 +579,55 @@ function animate() {
 window.addEventListener('resize', init);
 init();
 animate();
+
+
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbymhLxrFagFQ8fieR9dZFU1VISlJsmT3v05sssZTGjKsuX50Z0tVmv8zzrpI3-2EniCOw/exec';
+  const form = document.forms['google-sheet'];
+  const btn = document.getElementById('submitBtn');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.innerHTML = "Sending...";
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+         // Check if the script actually sent a success response
+         return response.json(); 
+      })
+      .then(data => {
+        btn.disabled = false;
+        btn.innerHTML = "Appoint";
+
+        if(data.result === 'success') {
+          Swal.fire({
+            title: 'Success!',
+            text: 'Your appointment has been recorded. We will get back to you soon.',
+            icon: 'success',
+            confirmButtonColor: '#2563eb'
+          });
+          form.reset();
+        } else {
+          throw new Error(data.error);
+        }
+      })
+      .catch(error => {
+        btn.disabled = false;
+        btn.innerHTML = "Appoint";
+        Swal.fire({
+          title: 'Error!',
+          text: 'Submission failed. Try again later.',
+          icon: 'error',
+          confirmButtonColor: '#2563eb'
+        });
+        console.error('Error!', error.message);
+      });
+  });
+
+
 </script>
-              
+<div id="appointment-form"></div>
 <div id="footer-placeholder"></div>
 <script src="javascript/animation.js"></script>
 <script src="javascript/script3.js"></script>
@@ -520,8 +635,6 @@ animate();
 <script src="javascript/script.js"></script>
   </body>
         </html>
-
-
 
 
 
