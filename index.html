@@ -100,6 +100,8 @@
 
   <!-- PORTFOLIO GRID -->
 
+
+
 <div class="grid grid-cols-1 md:grid-cols-6 gap-4 p-6 min-h-fit md:min-h-[600px]">
   <a href="#GraphicDs" id="scroll-link4" class="reveal group relative md:col-span-3 md:row-span-2 overflow-hidden rounded-lg shadow-lg min-h-[200px]">
     <img src="photo/ehe.png" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Graphic Design" loading="lazy">
@@ -398,7 +400,7 @@
 <div class="w-full max-w-6xl py-12 sm:py-16 md:py-20 mb-10 flex justify-center items-center rounded-xl mx-auto px-4">
   <h1 class="
     text-2xl
-    sm:text-2xl
+    sm:text-1xl
     md:text-4xl
     lg:text-5xl
     xl:text-6xl
@@ -787,6 +789,31 @@
       </div>
     </form>
   </div>
+</div>
+
+
+<div id="traffic-container" class="fixed top-6 left-6 z-50 flex flex-col items-start transition-all duration-500 opacity-0 -translate-y-10 pointer-events-none">
+    
+    <button onclick="toggleTrafficCard()" class="group flex items-center justify-center w-10 h-10 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-full shadow-lg hover:border-blue-500 transition-all active:scale-95">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500 group-hover:text-blue-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+        </svg>
+    </button>
+
+    <div id="traffic-card" class="hidden mt-3 w-56 p-4 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white/95 dark:bg-gray-900/90 backdrop-blur-md shadow-2xl animate-in slide-in-from-top-2 duration-300">
+        <div class="space-y-3">
+            <div class="flex justify-between items-center">
+                <p class="text-[8px] uppercase tracking-tighter text-gray-400 font-black">Total Visitors</p>
+                <p id="total-count" class="text-sm font-semibold text-gray-900 dark:text-white">1,284</p>
+            </div>
+            <div class="flex justify-between items-center pb-2 border-b border-gray-100 dark:border-gray-800">
+                <p class="text-[8px] uppercase tracking-tighter text-blue-500 font-black">Your Visits</p>
+                <p id="local-count" class="text-sm font-semibold text-blue-600 dark:text-blue-400">0</p>
+            </div>
+            <p id="visitor-id-display" class="text-[8px] font-mono text-gray-400 text-center opacity-60">ID: LOADING...</p>
+        </div>
+    </div>
 </div>
 
 <!-- FOOOTER -->
