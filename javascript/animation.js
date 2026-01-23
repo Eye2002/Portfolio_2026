@@ -56,3 +56,47 @@ document.addEventListener("DOMContentLoaded", function() {
         startTimer();
     });
 });
+
+
+
+const trafficContainer = document.getElementById('traffic-container');
+    const trafficCard = document.getElementById('traffic-card');
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            trafficContainer.classList.remove('opacity-0', '-translate-y-10', 'pointer-events-none');
+            trafficContainer.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        } else {
+            trafficContainer.classList.add('opacity-0', '-translate-y-10', 'pointer-events-none');
+            trafficContainer.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+            trafficCard.classList.add('hidden');
+        }
+    };
+
+    function toggleTrafficCard() {
+        trafficCard.classList.toggle('hidden');
+    }
+
+    // --- TRACKING LOGIC: Counting Visitors ---
+    function initTracker() {
+        // 1. Handle Personal Visits (Stored in Browser)
+        let visits = localStorage.getItem('visit_count') || 0;
+        visits = parseInt(visits) + 1;
+        localStorage.setItem('visit_count', visits);
+        document.getElementById('local-count').innerText = visits;
+
+        // 2. Generate/Retrieve a Session ID
+        let sessionId = sessionStorage.getItem('session_id');
+        if (!sessionId) {
+            sessionId = 'ID-' + Math.random().toString(36).substr(2, 6).toUpperCase();
+            sessionStorage.setItem('session_id', sessionId);
+        }
+        document.getElementById('visitor-id-display').innerText = sessionId;
+
+        // 3. Simulate "Total Visitors" (Adding a random realistic number)
+        let baseTotal = 1284; 
+        document.getElementById('total-count').innerText = (baseTotal + visits).toLocaleString();
+    }
+
+    // Run tracker when page loads
+    window.onload = initTracker;
