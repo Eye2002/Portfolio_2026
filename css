@@ -99,3 +99,39 @@ body.dark-mode #scrollTopBtn:hover {
 
 
         
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .btn.active { background-color: #4A90E2 !important; color: white !important; }
+
+
+  #behanceModal {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+@keyframes gradient-x {
+    0%, 100% { background-size: 200% 200%; background-position: left center; }
+    50% { background-size: 200% 200%; background-position: right center; }
+  }
+  .animate-gradient-x {
+    animation: gradient-x 5s ease infinite;
+  }
+
+  .btn.active {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-bottom-color: #4B5563; /* Optional subtle accent */
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
