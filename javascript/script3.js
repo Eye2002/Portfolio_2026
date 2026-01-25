@@ -195,31 +195,67 @@ function filterSelection(c) {
   }
 }
 
+// 1. Settings
+let itemsToShow = 4; // How many to show initially
+let currentLimit = itemsToShow;
+let activeCategory = 'all';
 
-function showMoreItems() {
-  // Select all items that still have the 'hidden' class
-  const hiddenItems = document.querySelectorAll('.hidden-item.hidden');
-  
-  // Define how many to show per click
-  const itemsToShow = 4;
-  
-  for (let i = 0; i < itemsToShow && i < hiddenItems.length; i++) {
-    // Remove the Tailwind 'hidden' class
-    hiddenItems[i].classList.remove('hidden');
+function updateGallery() { 
+  // 1. Show/Hide Items Based on Category and Limit
+  const items = document.querySelectorAll('.portfolio-item');
+  let visibleInCat = 0;
+
+  items.forEach(item => {
+    const match = activeCategory === 'all' || item.classList.contains(activeCategory);
     
-    // Smooth fade-in effect
-    hiddenItems[i].style.opacity = "0";
-    hiddenItems[i].style.transition = "opacity 0.5s ease";
-    setTimeout(() => {
-        hiddenItems[i].style.opacity = "1";
-    }, 50 * i);
-  }
+    if (match) {
+      visibleInCat++;
+      // Only show if within the current "Show More" limit
+      if (visibleInCat <= currentLimit) {
+        item.classList.remove('hidden');
+        item.style.display = 'block'; 
+      } else {
+        item.classList.add('hidden');
+        item.style.display = 'none';
+      }
+    } else {
+      // Hide if it doesn't match the category
+      item.classList.add('hidden');
+      item.style.display = 'none';
+    }
+  });
 
-  // Check again: if no more hidden items exist, remove the button
-  if (document.querySelectorAll('.hidden-item.hidden').length === 0) {
-    document.getElementById('show-more-btn').style.display = 'none';
+  // 2. Handle the "Show More" button visibility
+  const totalInCat = Array.from(items).filter(i => 
+    activeCategory === 'all' || i.classList.contains(activeCategory)
+  ).length;
+
+  const showMoreBtn = document.getElementById('show-more-btn');
+  if (currentLimit >= totalInCat) {
+    showMoreBtn.style.setProperty('display', 'none', 'important');
+  } else {
+    showMoreBtn.style.setProperty('display', 'block', 'important');
   }
 }
+
+// 3. Trigger Functions (Called by your HTML onclick)
+window.filterSelection = function(category) {
+  activeCategory = category;
+  currentLimit = itemsToShow; // Reset count to 4 when switching categories
+  updateGallery();
+  
+  // Optional: Update button UI to show which is active
+  document.querySelectorAll('.btn').forEach(btn => btn.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+};
+
+window.showMoreItems = function() {
+  currentLimit += 4; // Add 4 more
+  updateGallery();
+};
+
+// 4. Run on startup
+document.addEventListener('DOMContentLoaded', updateGallery);
 
 
 // ================ behance model - image show =================
