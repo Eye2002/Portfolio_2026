@@ -135,3 +135,17 @@ body.dark-mode #scrollTopBtn:hover {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+
+/* button category */
+.btn.active {
+    background-color: #000000 !important; /* Black background in light mode */
+    color: #ffffff !important;           /* White text */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Dark Mode Active State */
+  .dark .btn.active {
+    background-color: #3b82f6 !important; /* Modern blue in dark mode */
+    color: #ffffff !important;           /* White text */
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+  }
