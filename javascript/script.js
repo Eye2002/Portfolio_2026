@@ -18,7 +18,7 @@
 const textArray = [
   "Graphic Designer",
   "Programmer",
-  "UI/UX Designer"
+  "UI Designer"
 ];
 
 const typingText = document.getElementById("typingText");
