@@ -52,20 +52,46 @@
     <a href="#" class="z-20 flex items-center shrink-0">
         <img src="GraphicD/LOGOEYE.png" alt="YourLogo" class="w-10 h-auto">
     </a>
-                <div id="nav-menu" class="nav-links 
+
+    <div id="nav-menu" class="nav-links
+
                 absolute left-0 top-[-200%] md:static
-                w-full md:w-auto 
-                md:flex-row items-center justify-center 
+
+                w-full md:w-auto
+
+                md:flex-row items-center justify-center
+
                 md:bg-transparent
-                transition-all duration-500 ease-in-out 
-                opacity-0 md:opacity-100 
+
+                transition-all duration-500 ease-in-out
+
+                opacity-0 md:opacity-100
+
                 rounded-2xl md:rounded-none shadow-xl md:shadow-none
+
                 py-16 md:py-12 z-20">
         
-        <div class="flex flex-col md:flex-row gap-6 md:gap-8 text-center">
+        <div class="flex flex-col md:flex-row gap-6 md:gap-8 text-center items-center">
             <a href="#apoint" id="scroll-link3" class="text-[11px] font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Appointment</a>
             <a href="#aboutme" id="scroll-link" class="text-[11px] font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">About Me</a>
-            <a href="#" class="text-[11px] font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+            
+            <div class="relative group">
+                <button class="text-[11px] font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 flex items-center gap-1">
+                    Social Media
+                    <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+
+                <div class="absolute left-1/2 -translate-x-1/2 mt-2 w-40 bg-white dark:bg-gray-800 border border-blue-100 dark:border-gray-700 rounded-xl shadow-xl 
+                            opacity-0 invisible scale-95 group-hover:opacity-100 group-hover:visible group-hover:scale-100 
+                            transition-all duration-200 z-[60] overflow-hidden">
+                    <div class="flex flex-col py-2">
+                        <a href="https://www.behance.net/hernancastaneda29" target="_blank" class="px-4 py-2 text-[10px] font-bold uppercase text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 hover:text-blue-600">Behance</a>
+                        <a href="https://www.facebook.com/jay.castaneda.250183" target="_blank" class="px-4 py-2 text-[10px] font-bold uppercase text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 hover:text-blue-600">Facebook</a>
+                        <a href="https://www.linkedin.com/in/hernan-casta%C3%B1eda-414a1a362/?locale=en_US" target="_blank" class="px-4 py-2 text-[10px] font-bold uppercase text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 hover:text-blue-600">LinkedIn</a>
+                        <a href="#" target="_blank" class="px-4 py-2 text-[10px] font-bold uppercase text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 hover:text-blue-600">GitHub</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -83,18 +109,34 @@
     </div>
 </nav>
              <!-- MENU -->
-            <canvas id="constellationCanvas" class="fixed top-0 left-0 w-full h-full -z-10 bg-gray-100 dark:bg-gray-900"></canvas>
-              <div class="flex justify-center items-center h-screen transition-colors duration-00">
-               <h1 class="font-bold text-center mt-10 
-             text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
-             text-gray-900 dark:text-blue-600">
-                 A <span id="typingText" class="text-blue-600 font-roboto dark:text-white"></span></h1>
-          </div>
+<canvas id="constellationCanvas" class="fixed top-0 left-0 w-full h-full -z-10 bg-gray-100 dark:bg-gray-900"></canvas>
 
-               <div class=" justify-center items-center mt-10">
-                <p class="flex justify-center items-center text-blue-600 dark:text-white font-medium">scroll for more details</p>
-                <img src="https://media.invisioncic.com/p289038/monthly_2020_05/arrow-down.gif.8d9aec7b8f92f2a50a1a64fce1733f3a.gif" alt="Scroll Down" class="mx-auto w-10 h-10">
-          </div>
+<div class="flex flex-col justify-center items-center min-h-screen px-4 sm:px-6 transition-colors duration-500">
+    
+    <h1 class="tracking-tight font-extrabold text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-gray-900 dark:text-blue-600 leading-none">
+        A <span id="typingText" class="text-blue-600 font-roboto dark:text-white"></span>
+    </h1>
+
+    <div class="mt-8 max-w-xl w-full">
+        <p class="text-sm sm:text-base md:text-lg font-semibold text-gray-600 dark:text-gray-300 text-center leading-relaxed antialiased">
+            Welcome to my portfolio! I'm <span class="font-extrabold text-blue-500 dark:text-white text-blue-600">Hernan</span>, 
+            a passionate graphic designer and UI enthusiast dedicated to crafting visually stunning and user-friendly digital experiences. 
+        </p>
+    </div>
+
+</div>
+
+   <div class="absolute bottom-10 left-0 w-full flex flex-col items-center justify-center space-y-2 ">
+    
+    <p class="text-xs sm:text-sm uppercase tracking-[0.2em] text-blue-600 dark:text-white font-bold opacity-80">
+        Scroll for more details
+    </p>
+
+    <img src="https://media.invisioncic.com/p289038/monthly_2020_05/arrow-down.gif.8d9aec7b8f92f2a50a1a64fce1733f3a.gif" 
+         alt="Scroll Down" 
+         class="w-8 h-8 md:w-10 md:h-10 dark:invert dark:brightness-200">
+
+</div>
 
   <!-- PORTFOLIO GRID -->
 
@@ -129,6 +171,586 @@
     </div>
   </a>
 </div>
+
+
+<div id="GraphicDs" class="min-h-screen p-8 bg-gray-100/30 dark:bg-gray-950/60 flex flex-col items-center font-sans">
+  
+<div class="w-full max-w-6xl py-12 sm:py-16 md:py-20 mb-10 flex justify-center items-center rounded-xl mx-auto px-4">
+  <h1 class="
+    text-2xl
+    sm:text-1xl
+    md:text-4xl
+    lg:text-5xl
+    xl:text-6xl
+    font-extrabold
+    leading-tight
+    md:leading-none
+    bg-gradient-to-r from-blue-500 via-purple-500 to-red-500
+    dark:bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
+    bg-clip-text text-transparent">
+    Graphic & UI Design
+  </h1>
+</div>
+
+
+<div id="btn-container"
+  class="flex flex-nowrap md:flex-wrap items-center justify-start md:justify-center 
+         gap-y-4 gap-x-2 sm:gap-x-3 md:gap-x-4 lg:gap-x-6
+         mb-10 sm:mb-16 
+         w-full max-w-6xl mx-auto 
+         px-4 md:px-10
+         overflow-x-auto no-scrollbar pb-4 md:pb-0">
+  
+  <button onclick="filterSelection('all')" 
+    class="btn active group relative flex-shrink-0 px-3 py-2 md:px-5 lg:px-8 md:py-2.5 
+           text-[10px] md:text-[12px] lg:text-sm 
+           uppercase tracking-wider md:tracking-[0.12em] lg:tracking-[0.2em] font-medium
+           transition-all duration-500 ease-out
+           text-gray-500 hover:text-black
+           dark:text-slate-400 dark:hover:text-white">
+    <span class="relative z-10">All</span>
+    <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-black dark:bg-blue-500 transition-all duration-300 group-hover:w-full group-hover:left-0 active-line"></span>
+  </button>
+
+  <button onclick="filterSelection('mockup')" 
+    class="btn group relative flex-shrink-0 px-3 py-2 md:px-5 lg:px-8 md:py-2.5 
+           text-[10px] md:text-[12px] lg:text-sm 
+           uppercase tracking-wider md:tracking-[0.12em] lg:tracking-[0.2em] font-medium
+           transition-all duration-500 ease-out
+           text-gray-500 hover:text-black
+           dark:text-slate-400 dark:hover:text-white">
+    <span class="relative z-10">Mockups</span>
+    <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-black dark:bg-blue-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+  </button>
+
+  <button onclick="filterSelection('social')" 
+    class="btn group relative flex-shrink-0 px-3 py-2 md:px-5 lg:px-8 md:py-2.5 
+           text-[10px] md:text-[12px] lg:text-sm 
+           uppercase tracking-wider md:tracking-[0.12em] lg:tracking-[0.2em] font-medium
+           transition-all duration-500 ease-out
+           text-gray-500 hover:text-black
+           dark:text-slate-400 dark:hover:text-white">
+    <span class="relative z-10">Social Media</span>
+    <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-black dark:bg-blue-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+  </button>
+
+  <button onclick="filterSelection('UI/UX')" 
+    class="btn group relative flex-shrink-0 px-3 py-2 md:px-5 lg:px-8 md:py-2.5 
+           text-[10px] md:text-[12px] lg:text-sm 
+           uppercase tracking-wider md:tracking-[0.12em] lg:tracking-[0.2em] font-medium
+           transition-all duration-500 ease-out
+           text-gray-500 hover:text-black
+           dark:text-slate-400 dark:hover:text-white">
+    <span class="relative z-10">UI/UX</span>
+    <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-black dark:bg-blue-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+  </button>
+
+  <button onclick="filterSelection('logo')" 
+    class="btn group relative flex-shrink-0 px-3 py-2 md:px-5 lg:px-8 md:py-2.5 
+           text-[10px] md:text-[12px] lg:text-sm 
+           uppercase tracking-wider md:tracking-[0.12em] lg:tracking-[0.2em] font-medium
+           transition-all duration-500 ease-out
+           text-gray-500 hover:text-black
+           dark:text-slate-400 dark:hover:text-white">
+    <span class="relative z-10">Logo</span>
+    <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-black dark:bg-blue-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+  </button>
+
+  <button onclick="filterSelection('poster')" 
+    class="btn group relative flex-shrink-0 px-3 py-2 md:px-5 lg:px-8 md:py-2.5 
+           text-[10px] md:text-[12px] lg:text-sm 
+           uppercase tracking-wider md:tracking-[0.12em] lg:tracking-[0.2em] font-medium
+           transition-all duration-500 ease-out
+           text-gray-500 hover:text-black
+           dark:text-slate-400 dark:hover:text-white">
+    <span class="relative z-10">Poster</span>
+    <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-black dark:bg-blue-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+  </button>
+</div>
+
+  
+<div class="flex justify-center items-center w-full">
+  <div class="overflow-x-auto">
+</div>
+
+<div id="portfolio-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-5xl px-4">
+    
+<div onclick="openModal('GraphicD/jordann.png','JORDAN' , 'Social Media , POSTER','Affinity , Figma')" class="portfolio-item manipulation social relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/jordann.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Jordan</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Social Media</span>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <div class="flex flex-wrap gap-1 sm:gap-2">
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Photoshop</span>
+          <!-- <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Lightroom</span> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div onclick="openModal('GraphicD/CHEESEPIZA.png','PEPPERONI CHEESE','Social Media','Poster','Affinity')" class="portfolio-item manipulation social poster relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/CHEESEPIZA.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Cheese Piza</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Social Media</span>
+          <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">POSTER</span>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <div class="flex flex-wrap gap-1 sm:gap-2">
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div onclick="openModal('GraphicD/TESTING.png')" class="portfolio-item poster relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/TESTING.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Night</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Poster</span>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <div class="flex flex-wrap gap-1 sm:gap-2">
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Photoshop</span>
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Lightroom</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div onclick="openModal('GraphicD/nikeairjordan.png','AIR JORDAN','Social Media','Poster','Branding','Affinity')" class="portfolio-item manipulation social poster relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/nikeairjordan.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Air jordann</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Social Media</span>
+          <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">POSTER</span>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <div class="flex flex-wrap gap-1 sm:gap-2">
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div onclick="openModal('GraphicD/finalss.jpg','Solo Leveling T-Shirts Design' , 'Mockup , Social Media','Affinity , Figma')" class="portfolio-item social mockup relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/finalss.jpg" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Solo Leveling</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <div class="flex flex-wrap gap-1">
+          <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Social Media</span>
+          <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Mockup</span>
+        </div>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <div class="flex flex-wrap gap-1 sm:gap-2">
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Figma</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div onclick="openModal('GraphicD/aaa.png','Solo Leveling T-Shirts Design' , 'Mockup , Social Media','Affinity , Figma')" class="portfolio-item mockup relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/aaa.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Solo Leveling T-shirts</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <div class="flex flex-wrap gap-1">
+          <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Mockup</span>
+        </div>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <div class="flex flex-wrap gap-1 sm:gap-2">
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Figma</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div onclick="openModal('GraphicD/SODAPOPB.png','Solo Leveling T-Shirts Design' , 'Mockup , Social Media','Affinity , Figma')" class="portfolio-item mockup relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/SODAPOPB.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Soda POP Design Mockup</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <div class="flex flex-wrap gap-1">
+          <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Mockup</span>
+        </div>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <div class="flex flex-wrap gap-1 sm:gap-2">
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Figma</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div onclick="openModal('GraphicD/aaaaaatest.png','Pedro Logo' , 'Logo Design','Affinity , Figma')" class="portfolio-item logo relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/aaaaaatest.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Pedro Logo design</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <div class="flex flex-wrap gap-1">
+          <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Logo</span>
+        </div>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <div class="flex flex-wrap gap-1 sm:gap-2">
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Figma</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div onclick="openModal('GraphicD/CLothing.png','ZA CLOTHING' , 'Logo Design','Affinity')" class="portfolio-item logo relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/CLothing.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">ZA CLOTHING</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <div class="flex flex-wrap gap-1">
+          <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Logo</span>
+        </div>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <div class="flex flex-wrap gap-1 sm:gap-2">
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- onclick="event.stopPropagation(); filterSelection('logo')" -->
+<div onclick="openModal('GraphicD/SODAPOPCAN.png','Soda POP' , 'Mockup Design','Affinity , Figma')" class="portfolio-item mockup relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/SODAPOPCAN.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">SODA POP CAN MOCKUP</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <div class="flex flex-wrap gap-1">
+          <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Mockup</span>
+        </div>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <div class="flex flex-wrap gap-1 sm:gap-2">
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Figma</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div onclick="openModal('GraphicD/Suppraa.png','GR SUPRA','Poster , Social Media','Photoshop')" class="portfolio-item poster social relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/Suppraa.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">SUPRA</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <div class="flex flex-wrap gap-1">
+          <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Social Media</span>
+          <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Poster</span>
+        </div>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Photoshop</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div onclick="openModal('GraphicD/MAZDA2.png','MAZDA','Poster , Social Media','Photoshop')" class="portfolio-item poster social relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/MAZDA2.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">MAZDA</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <div class="flex flex-wrap gap-1">
+          <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Social Media</span>
+          <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Poster</span>
+        </div>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div onclick="openModal('GraphicD/WorkExample.png','Game Website UI Design','UI / UX Design','Figma , Affinity')" class="portfolio-item UI/UX relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/WorkExample.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">UI Design</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">UI/UX</span>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <div class="flex flex-wrap gap-1 sm:gap-2">
+           <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Figma</span>
+           <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div onclick="openModal('GraphicD/AdvertisementIphone17.png','Iphone 17 Advertisement','Branding , Poster','Affinity')" class="portfolio-item social poster relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/AdvertisementIphone17.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Advertisement Iphone 17</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Poster</span>
+         <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Social Media</span>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Figma</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div onclick="openModal('GraphicD/MOTOBLACK.png','MOTO BLACK','Social Media , Poster','Affinity')" class="portfolio-item social poster relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/MOTOBLACK.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">MOTO BLACK</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Poster</span>
+         <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Social Media</span>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">MOSH-PRO</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div onclick="openModal('GraphicD/cofee.png','MILOMOO','Branding , Poster','Affinity')" class="portfolio-item social poster relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/cofee.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">MILOMOO</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Poster</span>
+         <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Social Media</span>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Figma</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div onclick="openModal('GraphicD/NEXORA.png','ICON LOGO','Logo','Affinity')" class="portfolio-item logo relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/NEXORA.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">NEXORA LOGO</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Logo</span>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+   <div onclick="openModal('GraphicD/Damnnn.png','SHAI VS KOBE','Social Media, Manipulation', 'Affinity')" 
+     class="portfolio-item manipulation social relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/Damnnn.png" 
+       class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" 
+       loading="lazy"/>
+  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold tracking-wider">SHAI VS KOBE</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <div class="flex flex-wrap gap-1">
+          <span 
+                class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 transition-colors">
+            Social Media
+          </span>
+          <span 
+                class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 transition-colors">
+            Manipulation
+          </span>
+        </div>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <div class="flex gap-1 sm:gap-2">
+          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div onclick="openModal('GraphicD/Kaiju8.png','Kaiju #8','Poster','Affinity')" class="portfolio-item poster relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/Kaiju8.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Kaiju</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Poster</span>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div onclick="openModal('GraphicD/eeheheh.png','Soda Poster Mockup (not done ehe)','Poster , Mockup','Affinity')" class="portfolio-item poster mockup relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
+  <img src="GraphicD/eeheheh.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
+    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Soda Pop Poster (notdont)</p>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
+        <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Poster</span>
+         <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Mockup</span>
+      </div>
+      <div>
+        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
+        <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+</div>
+  <button id="show-more-btn" onclick="showMoreItems()" class="p-6 mt-6 bg-[#4A90E2] text-white px-8 py-3 rounded-full font-bold hover:bg-blue-600 transition-all duration-300 shadow-lg">
+    Show More
+  </button>
+</div>
+</div>
+
+<div id="behanceModal" class="fixed inset-0 z-[9999] hidden bg-black/95 flex justify-center overflow-y-auto" onclick="Xmodal()">
+  <button onclick="Xmodal()" class="fixed top-3 right-3 sm:top-5 sm:right-10 
+         w-10 h-10 sm:w-14 sm:h-14 
+         flex items-center justify-center 
+         border-2 border-blue-300 rounded-full 
+         dark:border-slate-500
+         text-blue-300 hover:text-white hover:bg-blue-500 hover:border-blue-500
+         dark:text-slate-400 dark:hover:text-white dark:hover:border-white
+         text-2xl sm:text-4xl pb-1
+         transition-all duration-300 z-[10000]">&times;</button>
+  
+  <div class="max-w-5xl w-full py-10 px-4" onclick="event.stopPropagation()">
+    <img id="modalImage" src="" class="w-full h-auto rounded-t-sm shadow-2xl" />
+    
+    <div class="bg-white p-8 mt-[-4px] rounded-b-sm border-t border-gray-100">
+        <h2 id="modalTitle" class="text-3xl font-black text-gray-900 uppercase tracking-tighter">PROJECT NAME</h2>
+        
+        <div class="flex flex-wrap gap-8 mt-6">
+            <div>
+                <p class="text-[10px] text-gray-400 uppercase font-bold mb-2">Category</p>
+                <div id="modalCategory" class="text-sm text-gray-700 font-medium"></div>
+            </div>
+            <div>
+                <p class="text-[10px] text-gray-400 uppercase font-bold mb-2">Tools Used</p>
+                <div id="modalTools" class="flex gap-2"></div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="flex justify-center items-center py-8 sm:py-12 px-4 dark:bg-gray-950/60 bg-gray-100/30 w-full overflow-hidden">
+  <h2 
+    id="Comingsoon" 
+    class="reveal group relative text-xl min-[400px]:text-2xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-center transition-all duration-300 ease-in-out"
+  >
+    <span class="dark:bg-gray-950/60 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 via-gray-400 to-gray-600 dark:from-blue-300 dark:via-white dark:to-blue-300 animate-gradient-x leading-tight">
+      Wait for more Update designs Soon
+    </span>
+    
+    <span class="inline-block mt-2 sm:mt-0 hover:scale-125 transition-transform duration-300 cursor-default whitespace-nowrap">
+      <span class="inline-block animate-bounce [animation-delay:-0.15s] text-lg sm:text-2xl md:text-4xl">😁</span>
+      <span class="inline-block animate-bounce text-lg sm:text-2xl md:text-4xl">👌</span>
+    </span>
+
+    <div class="mt-3 h-0.5 md:h-1 w-16 sm:w-24 mx-auto bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50 group-hover:w-32 md:group-hover:w-48 transition-all duration-500"></div>
+  </h2>
+</div> -->
+
                                           <!-- About ME -->
 <div class="w-full min-h-screen p-4 md:p-8 bg-gray-50/20 dark:bg-gray-900/50 transition-colors duration-300" loading="lazy">
     
@@ -163,36 +785,49 @@
 </div>
 
             <div class="reveal bg-white/50 rounded-3xl p-8 shadow-sm border border-white/40 backdrop-blur-sm flex flex-col justify-between space-y-8 dark:bg-gray-800/50 dark:border-gray-700" loading="lazy">
-                <div>
-                    <h3 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">Programming Skills</h3>
-                    <div class="flex flex-wrap gap-3 dark:text-gray-200">
-                        <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium dark:text-white">Java</span>
-                         <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium dark:text-white">Tailwind</span>
-                        <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium dark:text-white">C#</span>
-                        <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium dark:text-white">HTML</span>
-                        <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium dark:text-white">CSS</span>
-                        <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium dark:text-white">JavaScript</span>
-                    </div>
-                </div>
+               <div>
+        <h3 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">Programming Skills</h3>
+        <div class="flex flex-wrap gap-4">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="w-10 h-10" title="Java">
+            <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind" class="w-10 h-10" title="Tailwind">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" class="w-10 h-10" title="C#">
+            <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg" alt="HTML5" class="w-10 h-10" title="HTML5">
+            <img src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg" alt="CSS3" class="w-10 h-10" title="CSS3">
+            <img src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg" alt="JavaScript" class="w-10 h-10" title="JavaScript">
+        </div>
+    </div>
 
-                <div>
-                    <h3 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">Resources & Platforms</h3>
-                    <div class="flex flex-wrap gap-3 dark:text-gray-200">
-                        <span class="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium">Visual Studio Code</span>
-                        <span class="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium">Figma</span>
-                        <span class="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium">Adobe Photoshop</span>
-                        <span class="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium">Affinity</span>
-                    </div>
-                </div>
+    <div>
+        <h3 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">Resources & Platforms</h3>
+        <div class="flex flex-wrap gap-6 items-center">
+            <img src="https://www.vectorlogo.zone/logos/visualstudio_code/visualstudio_code-icon.svg" alt="VS Code" class="w-8 h-8" title="VS Code">
+            <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="Figma" class="w-8 h-8" title="Figma">
+            <img src="https://pngimg.com/uploads/photoshop/photoshop_PNG68.png" alt="Photoshop" class="w-8 h-8" title="Adobe Photoshop">
+            <img src="https://zdrojak.cz/wp-content/uploads/2025/11/affinity-logo-icon-hd.png" alt="Affinity" class="w-8 h-8" title="Affinity">
+            <img src="https://freepnglogo.com/images/all_img/1691829400logo-canva-png.png" alt="Canva" class="w-8 h-8" title="Canva">
+        </div>
+    </div>
 
-                <div class="pt-6 border-t border-blue-500 dark:text-gray-200">
-                    <h3 class="text-xl font-bold mb-4 italic text-gray-800 dark:text-white">Services</h3>
-                    <ul class="space-y-4 text-gray-600 dark:text-gray-300">
-                        <li class="flex items-center text-lg"><span class="w-8 text-blue-400 ">⚡</span> Web Development</li>
-                        <li class="flex items-center text-lg"><span class="w-8 text-pink-400">🎨</span> Graphics Design</li>
-                        <li class="flex items-center text-lg"><span class="w-8 text-purple-400">🎬</span> UI/UX Designer</li>
-                        <li class="flex items-center text-lg"><span class="w-8 text-indigo-400">🛠️</span> Tech-Support</li>
-                    </ul>
+    <div class="pt-6 border-t border-blue-500 dark:text-gray-200">
+        <h3 class="text-xl font-bold mb-4 italic text-gray-800 dark:text-white">Services</h3>
+        <ul class="space-y-4 text-gray-600 dark:text-gray-300">
+            <li class="flex items-center text-lg gap-3">
+                <img src="https://img.icons8.com/fluency/48/source-code.png" class="w-7 h-7" alt="Web Dev">
+                <span>Web Development</span>
+            </li>
+            <li class="flex items-center text-lg gap-3">
+                <img src="https://img.icons8.com/fluency/48/color-palette.png" class="w-7 h-7" alt="Graphics">
+                <span>Graphics Design</span>
+            </li>
+            <li class="flex items-center text-lg gap-3">
+                <img src="https://img.icons8.com/fluency/48/layers.png" class="w-7 h-7" alt="UI/UX">
+                <span>UI Designer</span>
+            </li>
+            <li class="flex items-center text-lg gap-3">
+                <img src="https://img.icons8.com/fluency/48/maintenance.png" class="w-7 h-7" alt="Tech Support">
+                <span>Tech-Support</span>
+            </li>
+        </ul>
                 </div>
             </div>
         </div>
@@ -393,610 +1028,7 @@
 
   <!-- GRAPHIC DESIGN PORTFOLIO -->
 
-<div id="GraphicDs" class="min-h-screen p-8 bg-gray-100/30 dark:bg-gray-950/60 flex flex-col items-center font-sans">
-  
-<div class="w-full max-w-6xl py-12 sm:py-16 md:py-20 mb-10 flex justify-center items-center rounded-xl mx-auto px-4">
-  <h1 class="
-    text-2xl
-    sm:text-1xl
-    md:text-4xl
-    lg:text-5xl
-    xl:text-6xl
-    font-extrabold
-    leading-tight
-    md:leading-none
-    bg-gradient-to-r from-blue-500 via-purple-500 to-red-500
-    dark:bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
-    bg-clip-text text-transparent">
-    My Example Works
-  </h1>
-</div>
 
-
-<div id="btn-container"
-  class="flex flex-nowrap md:flex-wrap items-center justify-start md:justify-center 
-         gap-y-4 gap-x-2 sm:gap-x-3 md:gap-x-4 lg:gap-x-6
-         mb-10 sm:mb-16 
-         w-full max-w-6xl mx-auto 
-         px-4 md:px-10
-         overflow-x-auto no-scrollbar pb-4 md:pb-0">
-  
-  <button onclick="filterSelection('all')" 
-    class="btn active group relative flex-shrink-0 px-3 py-2 md:px-5 lg:px-8 md:py-2.5 
-           text-[10px] md:text-[12px] lg:text-sm 
-           uppercase tracking-wider md:tracking-[0.12em] lg:tracking-[0.2em] font-medium
-           transition-all duration-500 ease-out
-           text-gray-500 hover:text-black
-           dark:text-slate-400 dark:hover:text-white">
-    <span class="relative z-10">All</span>
-    <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-black dark:bg-blue-500 transition-all duration-300 group-hover:w-full group-hover:left-0 active-line"></span>
-  </button>
-
-  <button onclick="filterSelection('mockup')" 
-    class="btn group relative flex-shrink-0 px-3 py-2 md:px-5 lg:px-8 md:py-2.5 
-           text-[10px] md:text-[12px] lg:text-sm 
-           uppercase tracking-wider md:tracking-[0.12em] lg:tracking-[0.2em] font-medium
-           transition-all duration-500 ease-out
-           text-gray-500 hover:text-black
-           dark:text-slate-400 dark:hover:text-white">
-    <span class="relative z-10">Mockups</span>
-    <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-black dark:bg-blue-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
-  </button>
-
-  <button onclick="filterSelection('social')" 
-    class="btn group relative flex-shrink-0 px-3 py-2 md:px-5 lg:px-8 md:py-2.5 
-           text-[10px] md:text-[12px] lg:text-sm 
-           uppercase tracking-wider md:tracking-[0.12em] lg:tracking-[0.2em] font-medium
-           transition-all duration-500 ease-out
-           text-gray-500 hover:text-black
-           dark:text-slate-400 dark:hover:text-white">
-    <span class="relative z-10">Social Media</span>
-    <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-black dark:bg-blue-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
-  </button>
-
-  <button onclick="filterSelection('UI/UX')" 
-    class="btn group relative flex-shrink-0 px-3 py-2 md:px-5 lg:px-8 md:py-2.5 
-           text-[10px] md:text-[12px] lg:text-sm 
-           uppercase tracking-wider md:tracking-[0.12em] lg:tracking-[0.2em] font-medium
-           transition-all duration-500 ease-out
-           text-gray-500 hover:text-black
-           dark:text-slate-400 dark:hover:text-white">
-    <span class="relative z-10">UI/UX</span>
-    <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-black dark:bg-blue-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
-  </button>
-
-  <button onclick="filterSelection('logo')" 
-    class="btn group relative flex-shrink-0 px-3 py-2 md:px-5 lg:px-8 md:py-2.5 
-           text-[10px] md:text-[12px] lg:text-sm 
-           uppercase tracking-wider md:tracking-[0.12em] lg:tracking-[0.2em] font-medium
-           transition-all duration-500 ease-out
-           text-gray-500 hover:text-black
-           dark:text-slate-400 dark:hover:text-white">
-    <span class="relative z-10">Logo</span>
-    <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-black dark:bg-blue-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
-  </button>
-
-  <button onclick="filterSelection('poster')" 
-    class="btn group relative flex-shrink-0 px-3 py-2 md:px-5 lg:px-8 md:py-2.5 
-           text-[10px] md:text-[12px] lg:text-sm 
-           uppercase tracking-wider md:tracking-[0.12em] lg:tracking-[0.2em] font-medium
-           transition-all duration-500 ease-out
-           text-gray-500 hover:text-black
-           dark:text-slate-400 dark:hover:text-white">
-    <span class="relative z-10">Poster</span>
-    <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-black dark:bg-blue-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
-  </button>
-</div>
-
-  
-<div class="flex justify-center items-center w-full">
-  <div class="overflow-x-auto">
-</div>
-
-<div id="portfolio-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-5xl px-4">
-    
-<div onclick="openModal('GraphicD/jordann.png','JORDAN' , 'Social Media , POSTER','Affinity , Figma')" class="portfolio-item manipulation social relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/jordann.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Jordan</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Social Media</span>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <div class="flex flex-wrap gap-1 sm:gap-2">
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Photoshop</span>
-          <!-- <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Lightroom</span> -->
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div onclick="openModal('GraphicD/CHEESEPIZA.png','PEPPERONI CHEESE','Social Media','Poster','Affinity')" class="portfolio-item manipulation social poster relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/CHEESEPIZA.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Cheese Piza</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Social Media</span>
-          <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">POSTER</span>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <div class="flex flex-wrap gap-1 sm:gap-2">
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div onclick="openModal('GraphicD/TESTING.png')" class="portfolio-item poster relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/TESTING.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Night</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Poster</span>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <div class="flex flex-wrap gap-1 sm:gap-2">
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Photoshop</span>
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Lightroom</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div onclick="openModal('GraphicD/nikeairjordan.png','AIR JORDAN','Social Media','Poster','Branding','Affinity')" class="portfolio-item manipulation social poster relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/nikeairjordan.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Air jordann</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Social Media</span>
-          <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">POSTER</span>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <div class="flex flex-wrap gap-1 sm:gap-2">
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-      <div onclick="openModal('GraphicD/MCDO BANNER.png','Macdonald Banner FB','Social Media', 'Affinity')" 
-     class="portfolio-item manipulation social relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/MCDO BANNER.png" 
-       class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" 
-       loading="lazy"/>
-  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold tracking-wider">Macdonald's banner FB</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <div class="flex flex-wrap gap-1">
-          <span 
-                class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 transition-colors">
-            Social Media
-          </span>
-        </div>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <div class="flex gap-1 sm:gap-2">
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
-<div onclick="openModal('GraphicD/finalss.jpg','Solo Leveling T-Shirts Design' , 'Mockup , Social Media','Affinity , Figma')" class="portfolio-item social mockup relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/finalss.jpg" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Solo Leveling</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <div class="flex flex-wrap gap-1">
-          <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Social Media</span>
-          <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Mockup</span>
-        </div>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <div class="flex flex-wrap gap-1 sm:gap-2">
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Figma</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div onclick="openModal('GraphicD/aaa.png','Solo Leveling T-Shirts Design' , 'Mockup , Social Media','Affinity , Figma')" class="portfolio-item mockup relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/aaa.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Solo Leveling T-shirts</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <div class="flex flex-wrap gap-1">
-          <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Mockup</span>
-        </div>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <div class="flex flex-wrap gap-1 sm:gap-2">
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Figma</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div onclick="openModal('GraphicD/SODAPOPB.png','Solo Leveling T-Shirts Design' , 'Mockup , Social Media','Affinity , Figma')" class="portfolio-item mockup relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/SODAPOPB.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Soda POP Design Mockup</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <div class="flex flex-wrap gap-1">
-          <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Mockup</span>
-        </div>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <div class="flex flex-wrap gap-1 sm:gap-2">
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Figma</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div onclick="openModal('GraphicD/aaaaaatest.png','Pedro Logo' , 'Logo Design','Affinity , Figma')" class="portfolio-item logo relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/aaaaaatest.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Pedro Logo design</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <div class="flex flex-wrap gap-1">
-          <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Logo</span>
-        </div>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <div class="flex flex-wrap gap-1 sm:gap-2">
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Figma</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
-
-<div onclick="openModal('GraphicD/CLothing.png','ZA CLOTHING' , 'Logo Design','Affinity')" class="portfolio-item logo relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/CLothing.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">ZA CLOTHING</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <div class="flex flex-wrap gap-1">
-          <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Logo</span>
-        </div>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <div class="flex flex-wrap gap-1 sm:gap-2">
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- onclick="event.stopPropagation(); filterSelection('logo')" -->
-<div onclick="openModal('GraphicD/SODAPOPCAN.png','Soda POP' , 'Mockup Design','Affinity , Figma')" class="portfolio-item mockup relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/SODAPOPCAN.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-  <div class="absolute inset-0 bg-gray-100/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">SODA POP CAN MOCKUP</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <div class="flex flex-wrap gap-1">
-          <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Mockup</span>
-        </div>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <div class="flex flex-wrap gap-1 sm:gap-2">
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Figma</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div onclick="openModal('GraphicD/Suppraa.png','GR SUPRA','Poster , Social Media','Photoshop')" class="portfolio-item poster social relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/Suppraa.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">SUPRA</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <div class="flex flex-wrap gap-1">
-          <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Social Media</span>
-          <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Poster</span>
-        </div>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Photoshop</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div onclick="openModal('GraphicD/MOTOBLACK.png','MOTO BLACK','Social Media , Poster','Affinity')" class="portfolio-item social poster relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/MOTOBLACK.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">MOTO BLACK</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Poster</span>
-         <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Social Media</span>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">MOSH-PRO</span>
-      </div>
-    </div>
-  </div>
-</div>
-    
-<div onclick="openModal('GraphicD/MAZDA2.png','MAZDA','Poster , Social Media','Photoshop')" class="portfolio-item poster social relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/MAZDA2.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">MAZDA</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <div class="flex flex-wrap gap-1">
-          <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Social Media</span>
-          <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Poster</span>
-        </div>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div onclick="openModal('GraphicD/WorkExample.png','Game Website UI Design','UI / UX Design','Figma , Affinity')" class="portfolio-item UI/UX relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/WorkExample.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">UI Design</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">UI/UX</span>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <div class="flex flex-wrap gap-1 sm:gap-2">
-           <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Figma</span>
-           <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div onclick="openModal('GraphicD/AdvertisementIphone17.png','Iphone 17 Advertisement','Branding , Poster','Affinity')" class="portfolio-item social poster relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/AdvertisementIphone17.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Advertisement Iphone 17</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Poster</span>
-         <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Social Media</span>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Figma</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div onclick="openModal('GraphicD/cofee.png','MILOMOO','Branding , Poster','Affinity')" class="portfolio-item social poster relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/cofee.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">MILOMOO</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Poster</span>
-         <span  class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Social Media</span>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Figma</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div onclick="openModal('GraphicD/NEXORA.png','ICON LOGO','Logo','Affinity')" class="portfolio-item logo relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/NEXORA.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">NEXORA LOGO</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Logo</span>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-   <div onclick="openModal('GraphicD/Damnnn.png','SHAI VS KOBE','Social Media, Manipulation', 'Affinity')" 
-     class="portfolio-item manipulation social relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/Damnnn.png" 
-       class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" 
-       loading="lazy"/>
-  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold tracking-wider">SHAI VS KOBE</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <div class="flex flex-wrap gap-1">
-          <span 
-                class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 transition-colors">
-            Social Media
-          </span>
-          <span 
-                class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 transition-colors">
-            Manipulation
-          </span>
-        </div>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <div class="flex gap-1 sm:gap-2">
-          <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div onclick="openModal('GraphicD/Kaiju8.png','Kaiju #8','Poster','Affinity')" class="portfolio-item poster relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/Kaiju8.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Kaiju</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Poster</span>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div onclick="openModal('GraphicD/eeheheh.png','Soda Poster Mockup (not done ehe)','Poster , Mockup','Affinity')" class="portfolio-item poster mockup relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
-  <img src="GraphicD/eeheheh.png" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-  <div class="absolute inset-0 bg-gray-200/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out flex flex-col justify-end p-3 sm:p-6">
-    <div class="space-y-2 sm:space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-      <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold">Soda Pop Poster (notdont)</p>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Category</p>
-        <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Poster</span>
-         <span class="bg-[#4A90E2] text-white text-[7px] sm:text-[10px] px-2 sm:px-4 py-1 rounded-full hover:bg-blue-600 inline-block">Mockup</span>
-      </div>
-      <div>
-        <p class="text-[8px] sm:text-[10px] text-gray-600 uppercase font-bold mb-1">Tools</p>
-        <span class="text-[7px] sm:text-[10px] bg-gray-300 px-1.5 sm:px-2 py-0.5 rounded text-gray-700">Affinity</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-</div>
-</div>
-  <button id="show-more-btn" onclick="showMoreItems()" class="p-6 mt-6 bg-[#4A90E2] text-white px-8 py-3 rounded-full font-bold hover:bg-blue-600 transition-all duration-300 shadow-lg">
-    Show More
-  </button>
-</div>
-</div>
-<!-- BUTTON FOR SHOWING IMAGE -->
-<div id="behanceModal" class="fixed inset-0 z-[9999] hidden bg-black/95 flex justify-center overflow-y-auto" onclick="Xmodal()">
-  <button onclick="Xmodal()" class="fixed top-3 right-3 sm:top-5 sm:right-10 
-         w-10 h-10 sm:w-14 sm:h-14 
-         flex items-center justify-center 
-         border-2 border-blue-300 rounded-full 
-         dark:border-slate-500
-         text-blue-300 hover:text-white hover:bg-blue-500 hover:border-blue-500
-         dark:text-slate-400 dark:hover:text-white dark:hover:border-white
-         text-2xl sm:text-4xl pb-1
-         transition-all duration-300 z-[10000]">&times;</button>
-  
-  <div class="max-w-5xl w-full py-10 px-4" onclick="event.stopPropagation()">
-    <img id="modalImage" src="" class="w-full h-auto rounded-t-sm shadow-2xl" />
-    
-    <div class="bg-white p-8 mt-[-4px] rounded-b-sm border-t border-gray-100">
-        <h2 id="modalTitle" class="text-3xl font-black text-gray-900 uppercase tracking-tighter">PROJECT NAME</h2>
-        
-        <div class="flex flex-wrap gap-8 mt-6">
-            <div>
-                <p class="text-[10px] text-gray-400 uppercase font-bold mb-2">Category</p>
-                <div id="modalCategory" class="text-sm text-gray-700 font-medium"></div>
-            </div>
-            <div>
-                <p class="text-[10px] text-gray-400 uppercase font-bold mb-2">Tools Used</p>
-                <div id="modalTools" class="flex gap-2"></div>
-            </div>
-        </div>
-    </div>
-  </div>
-</div>
-
-<div class="flex justify-center items-center py-8 sm:py-12 px-4 dark:bg-gray-950/60 bg-gray-100/30 w-full overflow-hidden">
-  <h2 
-    id="Comingsoon" 
-    class="reveal group relative text-xl min-[400px]:text-2xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-center transition-all duration-300 ease-in-out"
-  >
-    <span class="dark:bg-gray-950/60 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 via-gray-400 to-gray-600 dark:from-blue-300 dark:via-white dark:to-blue-300 animate-gradient-x leading-tight">
-      Wait for more Update designs Soon
-    </span>
-    
-    <span class="inline-block mt-2 sm:mt-0 hover:scale-125 transition-transform duration-300 cursor-default whitespace-nowrap">
-      <span class="inline-block animate-bounce [animation-delay:-0.15s] text-lg sm:text-2xl md:text-4xl">😁</span>
-      <span class="inline-block animate-bounce text-lg sm:text-2xl md:text-4xl">👌</span>
-    </span>
-
-    <div class="mt-3 h-0.5 md:h-1 w-16 sm:w-24 mx-auto bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50 group-hover:w-32 md:group-hover:w-48 transition-all duration-500"></div>
-  </h2>
-</div>
 
 <!-- appointment -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -1253,6 +1285,9 @@ animate();
 
 
 </script>
+
+
+
 <div id="appointment-form"></div>
 <div id="footer-placeholder"></div>
 <script src="javascript/animation.js"></script>
@@ -1261,8 +1296,6 @@ animate();
 <script src="javascript/script.js"></script>
   </body>
         </html>
-
-
 
 
 
