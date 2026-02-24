@@ -259,41 +259,52 @@ document.addEventListener('DOMContentLoaded', updateGallery);
 
 
 // ================ behance model - image show =================
-function openModal(imgSrc, title, categories, tools) {
+function openModal(src, title, categories, tools) {
     try {
-        console.log("Attempting to open modal for:", title);
-        
         const modal = document.getElementById('behanceModal');
         const modalImg = document.getElementById('modalImage');
+        const modalVideo = document.getElementById('modalVideo'); 
         const modalTitle = document.getElementById('modalTitle');
         const modalCategory = document.getElementById('modalCategory');
         const toolsContainer = document.getElementById('modalTools');
 
-        // 1. Set Image
-        modalImg.src = imgSrc;
-        
-        // 2. Set Title
-        modalTitle.innerText = title || "Project Details";
-        
-        // 3. Set Category
-        modalCategory.innerText = categories || "General";
-        
-        // 4. Set Tools (Clears old ones and adds new ones)
+        // Reset
+        modalImg.classList.add('hidden');
+        if (modalVideo) {
+            modalVideo.classList.add('hidden');
+            modalVideo.pause();
+            modalVideo.src = "";
+        }
+
+        // Display Logic
+        if (src.toLowerCase().endsWith('.mp4')) {
+            modalVideo.src = src;
+            modalVideo.classList.remove('hidden');
+            modalVideo.play(); 
+        } else {
+            modalImg.src = src;
+            modalImg.classList.remove('hidden');
+        }
+
+        modalTitle.innerText = title || "Project View";
+        modalCategory.innerText = categories || "Portfolio";
+
+        // Minimal Tools Badges
         toolsContainer.innerHTML = ''; 
         if (tools) {
             const toolsArray = tools.split(',');
             toolsArray.forEach(tool => {
                 const span = document.createElement('span');
-                span.className = "text-[11px] bg-gray-100 px-3 py-1 rounded text-gray-600 font-bold uppercase";
+                span.className = "text-[10px] bg-white/5 border border-white/10 px-4 py-2 rounded-full text-white/50 font-medium uppercase tracking-widest";
                 span.innerText = tool.trim();
                 toolsContainer.appendChild(span);
             });
         }
 
-        // 5. Show Modal
         modal.classList.remove('hidden');
+        modal.classList.add('flex');
         document.body.style.overflow = 'hidden';
-        
+
     } catch (error) {
         console.error("Modal Error:", error);
     }
@@ -301,6 +312,12 @@ function openModal(imgSrc, title, categories, tools) {
 
 function Xmodal() {
     const modal = document.getElementById('behanceModal');
+    const modalVideo = document.getElementById('modalVideo');
+    if (modalVideo) {
+        modalVideo.pause();
+        modalVideo.src = "";
+    }
     modal.classList.add('hidden');
+    modal.classList.remove('flex');
     document.body.style.overflow = 'auto';
 }
