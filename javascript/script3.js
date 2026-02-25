@@ -338,37 +338,37 @@ function Xmodal() {
   });
 
 
-function openModal(videoSrc) {
-    const modal = document.getElementById('videoModal');
-    const modalVideo = document.getElementById('modalVideo');
+// function openModal(videoSrc) {
+//     const modal = document.getElementById('videoModal');
+//     const modalVideo = document.getElementById('modalVideo');
     
-    // Set the video source
-    modalVideo.src = videoSrc;
-    // Show the modal
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
-    // Disable scrolling on body
-    document.body.style.overflow = 'hidden';
-  }
+//     // Set the video source
+//     modalVideo.src = videoSrc;
+//     // Show the modal
+//     modal.classList.remove('hidden');
+//     modal.classList.add('flex');
+//     // Disable scrolling on body
+//     document.body.style.overflow = 'hidden';
+//   }
 
-  function closeModal() {
-    const modal = document.getElementById('videoModal');
-    const modalVideo = document.getElementById('modalVideo');
+//   function closeModal() {
+//     const modal = document.getElementById('videoModal');
+//     const modalVideo = document.getElementById('modalVideo');
     
-    // Hide the modal
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
-    // Pause and clear the video
-    modalVideo.pause();
-    modalVideo.src = "";
-    // Re-enable scrolling
-    document.body.style.overflow = 'auto';
-  }
+//     // Hide the modal
+//     modal.classList.add('hidden');
+//     modal.classList.remove('flex');
+//     // Pause and clear the video
+//     modalVideo.pause();
+//     modalVideo.src = "";
+//     // Re-enable scrolling
+//     document.body.style.overflow = 'auto';
+//   }
 
-  // Close modal if user clicks outside the video
-  window.onclick = function(event) {
-    const modal = document.getElementById('videoModal');
-    if (event.target == modal) {
-      closeModal();
-    }
-  }
+//   // Close modal if user clicks outside the video
+//   window.onclick = function(event) {
+//     const modal = document.getElementById('videoModal');
+//     if (event.target == modal) {
+//       closeModal();
+//     }
+//   }
