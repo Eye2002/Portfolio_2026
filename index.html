@@ -852,6 +852,121 @@
 </div>
 </div>
 
+<!-- video  -->
+
+
+<div id="videoModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 p-4 backdrop-blur-sm">
+  <button onclick="closeModal()" class="absolute top-6 right-6 text-white hover:text-gray-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+  
+  <div class="relative max-h-[90vh] w-full max-w-5xl overflow-hidden rounded-xl bg-black shadow-2xl">
+    <video id="modalVideo" class="h-full w-full" controls autoplay>
+      <source src="" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<div class="mx-auto max-w-7xl px-6 py-12">
+  <div class="flex flex-wrap gap-8 justify-center">
+
+    <div onclick="openModal('GraphicD/SK_ANIMATIONLOGO.mp4','SK Animation Logo','Logo Animation','Affinity , After Effect')" class="group cursor-pointer flex w-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-2 hover:shadow-xl dark:border-zinc-800 dark:bg-zinc-950 md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]">
+      
+      <div class="relative aspect-video w-full overflow-hidden bg-black">
+        <video class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105" autoplay muted loop playsinline>
+          <source src="GraphicD/SK_ANIMATIONLOGO.mp4" type="video/mp4">
+        </video>
+        <div class="absolute top-3 left-3">
+          <span class="rounded-full bg-black/50 px-3 py-1 text-[10px] font-bold text-white backdrop-blur-md">01</span>
+        </div>
+      </div>
+
+      <div class="flex flex-1 flex-col p-6">
+        <div class="mb-3 flex items-center justify-between">
+          <span class="text-[10px] font-bold tracking-widest text-blue-600 uppercase">Logo Animation</span>
+          <span class="text-[10px] text-slate-400">2026</span>
+        </div>
+        <h3 class="mb-2 text-xl font-bold text-slate-900 dark:text-white">SK Animation</h3>
+        <p class="mb-6 text-sm leading-relaxed text-slate-500 dark:text-zinc-400 line-clamp-3">
+          First official logo animation project. Focused on smooth transitions and brand identity using After Effects and Designer.
+        </p>
+
+        <div class="mt-auto flex items-center justify-between border-t border-slate-100 pt-4 dark:border-zinc-800">
+          <div class="flex gap-3">
+            <img src="https://zdrojak.cz/wp-content/uploads/2025/11/affinity-logo-icon-hd.png" class="h-5 w-5 opacity-70 hover:opacity-100" title="Affinity">
+            <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/16_Aftereffects_After_Effects_Adobe_logo_logos-1024.png" class="h-5 w-5 opacity-70 hover:opacity-100" title="After Effects">
+          </div>
+          <button class="text-[11px] font-bold text-slate-900 dark:text-white uppercase hover:underline">View Case →</button>
+        </div>
+      </div>
+    </div>
+
+    <div onclick="openModal('Vid/T3.mp4','SK Teaser For Upcoming Sports Event','Video Teaser','Affinity,After Effect,Adobe Premiere Pro')" class="group cursor-pointer flex w-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-2 hover:shadow-xl dark:border-zinc-800 dark:bg-zinc-950 md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]">
+      <div class="relative aspect-video w-full overflow-hidden bg-black">
+        <video class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105" autoplay muted loop playsinline>
+          <source src="Vid/T3.mp4" type="video/mp4">
+        </video>
+        <div class="absolute top-3 left-3">
+          <span class="rounded-full bg-black/50 px-3 py-1 text-[10px] font-bold text-white backdrop-blur-md">02</span>
+        </div>
+      </div>
+
+      <div class="flex flex-1 flex-col p-6">
+        <div class="mb-3 flex items-center justify-between">
+          <span class="text-[10px] font-bold tracking-widest text-green-600 uppercase">Teaser Typography video</span>
+          <span class="text-[10px] text-slate-400">2026</span>
+        </div>
+        <h3 class="mb-2 text-xl font-bold text-slate-900 dark:text-white">Teaser Video</h3>
+        <p class="mb-6 text-sm leading-relaxed text-slate-500 dark:text-zinc-400 line-clamp-3">
+          I create a teaser video for an upcoming sports event, using dynamic typography and energetic visuals to build excitement in the audience.
+        </p>
+        <div class="mt-auto flex items-center justify-between border-t border-slate-100 pt-4 dark:border-zinc-800">
+          <div class="flex gap-3">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/adobe-premiere-pro-icon.png" class="h-5 w-5 opacity-70 hover:opacity-100">
+            <img src="https://zdrojak.cz/wp-content/uploads/2025/11/affinity-logo-icon-hd.png" class="h-5 w-5 opacity-70 hover:opacity-100" title="Affinity">
+            <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/16_Aftereffects_After_Effects_Adobe_logo_logos-1024.png" class="h-5 w-5 opacity-70 hover:opacity-100" title="After Effects">
+          </div>
+          <button class="text-[11px] font-bold text-slate-900 dark:text-white uppercase hover:underline">View Case →</button>
+        </div>
+      </div>
+    </div>
+
+  <div onclick="openModal('Vid/T1.mp4','Valorant Edit','My Tiktok Video','Adobe Premiere Pro')" class="group cursor-pointer flex w-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-2 hover:shadow-xl dark:border-zinc-800 dark:bg-zinc-950 md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]">
+      <div class="relative aspect-video w-full overflow-hidden bg-black">
+        <video class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105" autoplay muted loop playsinline>
+          <source src="Vid/T1.mp4" type="video/mp4">
+        </video>
+        <div class="absolute top-3 left-3">
+          <span class="rounded-full bg-black/50 px-3 py-1 text-[10px] font-bold text-white backdrop-blur-md">03</span>
+        </div>
+      </div>
+
+      <div class="flex flex-1 flex-col p-6">
+        <div class="mb-3 flex items-center justify-between">
+          <span class="text-[10px] font-bold tracking-widest text-purple-600 uppercase">Montage</span>
+          <span class="text-[10px] text-slate-400">2022</span>
+        </div>
+        <h3 class="mb-2 text-xl font-bold text-slate-900 dark:text-white">Valorant Edit</h3>
+        <p class="mb-6 text-sm leading-relaxed text-slate-500 dark:text-zinc-400 line-clamp-3">
+         valorant edit that I made for my tiktok account, focused on fast cuts and dynamic transitions to match the energy of the game.
+        </p>
+        <div class="mt-auto flex items-center justify-between border-t border-slate-100 pt-4 dark:border-zinc-800">
+          <div class="flex gap-3">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/adobe-premiere-pro-icon.png" class="h-5 w-5 opacity-70 hover:opacity-100">        
+          </div>
+          <button class="text-[11px] font-bold text-slate-900 dark:text-white uppercase hover:underline">View Case →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</div>
+
 
                                           <!-- About ME -->
 <div class="w-full min-h-screen p-4 md:p-8 bg-gray-50/20 dark:bg-gray-900/50 transition-colors duration-300" loading="lazy">
@@ -907,6 +1022,8 @@
             <img src="https://pngimg.com/uploads/photoshop/photoshop_PNG68.png" alt="Photoshop" class="w-8 h-8" title="Adobe Photoshop">
             <img src="https://zdrojak.cz/wp-content/uploads/2025/11/affinity-logo-icon-hd.png" alt="Affinity" class="w-8 h-8" title="Affinity">
             <img src="https://freepnglogo.com/images/all_img/1691829400logo-canva-png.png" alt="Canva" class="w-8 h-8" title="Canva">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/adobe-premiere-pro-icon.png" alt="Premiere Pro" class="w-8 h-8" title="Adobe Premiere Pro">
+            <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/16_Aftereffects_After_Effects_Adobe_logo_logos-1024.png" alt="After Effects" class="w-8 h-8" title="Adobe After Effects">
         </div>
     </div>
 
