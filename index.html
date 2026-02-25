@@ -316,29 +316,6 @@
   </div>
 </div>
 
-<div id="portfolio-modal" class="hidden fixed inset-0 z-[100] bg-black/95 backdrop-blur-md flex-col items-center justify-center p-4">
-    
-    <button onclick="closeModal()" class="absolute top-6 right-6 text-white/50 hover:text-white transition-all">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-    </button>
-
-    <div class="relative max-w-5xl w-full flex justify-center items-center">
-        <img id="modal-image" src="" class="hidden max-h-[80vh] w-auto object-contain shadow-2xl">
-        
-        <video id="modal-video" controls class="hidden max-h-[80vh] w-auto shadow-2xl">
-            <source src="" type="video/mp4">
-        </video>
-    </div>
-
-    <div class="mt-8 text-center text-white">
-        <h2 id="modal-title" class="text-2xl font-light tracking-wide"></h2>
-        <div class="flex gap-4 justify-center mt-2 items-center">
-            <span id="modal-category" class="text-blue-400 text-xs uppercase tracking-[0.2em]"></span>
-            <span class="text-gray-600">|</span>
-            <span id="modal-tools" class="text-gray-400 text-xs uppercase tracking-[0.2em]"></span>
-        </div>
-    </div>
-</div>
 
 
 <div onclick="openModal('GraphicD/TESTING.png')" class="portfolio-item poster relative group cursor-pointer overflow-hidden aspect-square transition-all duration-500 transform-gpu scale-100 opacity-100">
@@ -872,16 +849,29 @@
 <div class="mx-auto max-w-7xl px-6 py-12">
   <div class="flex flex-wrap gap-8 justify-center">
 
-    <div onclick="openModal('GraphicD/SK_ANIMATIONLOGO.mp4','SK Animation Logo','Logo Animation','Affinity , After Effect')" class="group cursor-pointer flex w-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-2 hover:shadow-xl dark:border-zinc-800 dark:bg-zinc-950 md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]">
-      
-      <div class="relative aspect-video w-full overflow-hidden bg-black">
-        <video class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105" autoplay muted loop playsinline>
-          <source src="GraphicD/SK_ANIMATIONLOGO.mp4" type="video/mp4">
-        </video>
-        <div class="absolute top-3 left-3">
-          <span class="rounded-full bg-black/50 px-3 py-1 text-[10px] font-bold text-white backdrop-blur-md">01</span>
-        </div>
-      </div>
+<div 
+  onclick="openModal('GraphicD/SK_ANIMATIONLOGO.mp4','SK Animation Logo','Logo Animation','Affinity , After Effect')" 
+  class="group cursor-pointer flex w-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-2 hover:shadow-xl dark:border-zinc-800 dark:bg-zinc-950 md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]"
+  onmouseenter="this.querySelector('video').play()"
+  onmouseleave="this.querySelector('video').pause(); this.querySelector('video').currentTime = 0;"
+>
+  
+  <div class="relative aspect-video w-full overflow-hidden bg-black">
+    <video 
+      class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105" 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+    >
+      <source src="GraphicD/SK_ANIMATIONLOGO.mp4" type="video/mp4">
+    </video>
+    
+    <div class="absolute top-3 left-3">
+      <span class="rounded-full bg-black/50 px-3 py-1 text-[10px] font-bold text-white backdrop-blur-md">01</span>
+    </div>
+  </div>
+
 
       <div class="flex flex-1 flex-col p-6">
         <div class="mb-3 flex items-center justify-between">
@@ -903,15 +893,27 @@
       </div>
     </div>
 
-    <div onclick="openModal('Vid/T3.mp4','SK Teaser For Upcoming Sports Event','Video Teaser','Affinity,After Effect,Adobe Premiere Pro')" class="group cursor-pointer flex w-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-2 hover:shadow-xl dark:border-zinc-800 dark:bg-zinc-950 md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]">
-      <div class="relative aspect-video w-full overflow-hidden bg-black">
-        <video class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105" autoplay muted loop playsinline>
-          <source src="Vid/T3.mp4" type="video/mp4">
-        </video>
-        <div class="absolute top-3 left-3">
-          <span class="rounded-full bg-black/50 px-3 py-1 text-[10px] font-bold text-white backdrop-blur-md">02</span>
-        </div>
-      </div>
+<div onclick="openModal('Vid/T3.mp4','SK Teaser For Upcoming Sports Event','Video Teaser','Affinity,After Effect,Adobe Premiere Pro')" 
+  class="group cursor-pointer flex w-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-2 hover:shadow-xl dark:border-zinc-800 dark:bg-zinc-950 md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]"
+  onmouseenter="this.querySelector('video').play()"
+  onmouseleave="this.querySelector('video').pause(); this.querySelector('video').currentTime = 0;"
+>
+  
+  <div class="relative aspect-video w-full overflow-hidden bg-black">
+    <video 
+      class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105" 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+    >
+      <source src="Vid/T3.mp4" type="video/mp4">
+    </video>
+    
+    <div class="absolute top-3 left-3">
+      <span class="rounded-full bg-black/50 px-3 py-1 text-[10px] font-bold text-white backdrop-blur-md">02</span>
+    </div>
+  </div>
 
       <div class="flex flex-1 flex-col p-6">
         <div class="mb-3 flex items-center justify-between">
@@ -933,15 +935,28 @@
       </div>
     </div>
 
-  <div onclick="openModal('Vid/T1.mp4','Valorant Edit','My Tiktok Video','Adobe Premiere Pro')" class="group cursor-pointer flex w-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-2 hover:shadow-xl dark:border-zinc-800 dark:bg-zinc-950 md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]">
-      <div class="relative aspect-video w-full overflow-hidden bg-black">
-        <video class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105" autoplay muted loop playsinline>
-          <source src="Vid/T1.mp4" type="video/mp4">
-        </video>
-        <div class="absolute top-3 left-3">
-          <span class="rounded-full bg-black/50 px-3 py-1 text-[10px] font-bold text-white backdrop-blur-md">03</span>
-        </div>
-      </div>
+<div 
+  onclick="openModal('Vid/T1.mp4','Valorant Edit','My Tiktok Video','Adobe Premiere Pro')" 
+  class="group cursor-pointer flex w-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-2 hover:shadow-xl dark:border-zinc-800 dark:bg-zinc-950 md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]"
+  onmouseenter="this.querySelector('video').play()"
+  onmouseleave="this.querySelector('video').pause(); this.querySelector('video').currentTime = 0;"
+>
+  
+  <div class="relative aspect-video w-full overflow-hidden bg-black">
+    <video 
+      class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105" 
+      muted 
+      loop 
+      playsinline
+      preload="metadata"
+    >
+      <source src="Vid/T1.mp4" type="video/mp4">
+    </video>
+    
+    <div class="absolute top-3 left-3">
+      <span class="rounded-full bg-black/50 px-3 py-1 text-[10px] font-bold text-white backdrop-blur-md">03</span>
+    </div>
+  </div>
 
       <div class="flex flex-1 flex-col p-6">
         <div class="mb-3 flex items-center justify-between">
